@@ -21,6 +21,7 @@
 		1EAB46241835AF840085629A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EAB46061835AF840085629A /* UIKit.framework */; };
 		1EAB462C1835AF840085629A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1EAB462A1835AF840085629A /* InfoPlist.strings */; };
 		1EAB462E1835AF840085629A /* GiffyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EAB462D1835AF840085629A /* GiffyTests.m */; };
+		1EE776C0183C0D6000FCCD5B /* MenuTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EE776BF183C0D6000FCCD5B /* MenuTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,8 @@
 		1EAB46291835AF840085629A /* GiffyTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GiffyTests-Info.plist"; sourceTree = "<group>"; };
 		1EAB462B1835AF840085629A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1EAB462D1835AF840085629A /* GiffyTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GiffyTests.m; sourceTree = "<group>"; };
+		1EE776BE183C0D6000FCCD5B /* MenuTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuTableViewController.h; sourceTree = "<group>"; };
+		1EE776BF183C0D6000FCCD5B /* MenuTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,11 +115,11 @@
 		1EAB46081835AF840085629A /* Giffy */ = {
 			isa = PBXGroup;
 			children = (
+				1EE776C1183C0D6C00FCCD5B /* View */,
+				1EE776C2183C0D7200FCCD5B /* Controllers */,
+				1EE776C3183C0D7700FCCD5B /* Models */,
 				1EAB46111835AF840085629A /* JGSAppDelegate.h */,
 				1EAB46121835AF840085629A /* JGSAppDelegate.m */,
-				1EAB46141835AF840085629A /* Main.storyboard */,
-				1EAB46171835AF840085629A /* JGSViewController.h */,
-				1EAB46181835AF840085629A /* JGSViewController.m */,
 				1EAB461A1835AF840085629A /* Images.xcassets */,
 				1EAB46091835AF840085629A /* Supporting Files */,
 			);
@@ -150,6 +153,32 @@
 				1EAB462A1835AF840085629A /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1EE776C1183C0D6C00FCCD5B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1EAB46141835AF840085629A /* Main.storyboard */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		1EE776C2183C0D7200FCCD5B /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				1EAB46171835AF840085629A /* JGSViewController.h */,
+				1EAB46181835AF840085629A /* JGSViewController.m */,
+				1EE776BE183C0D6000FCCD5B /* MenuTableViewController.h */,
+				1EE776BF183C0D6000FCCD5B /* MenuTableViewController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		1EE776C3183C0D7700FCCD5B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -250,6 +279,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1EE776C0183C0D6000FCCD5B /* MenuTableViewController.m in Sources */,
 				1EAB460F1835AF840085629A /* main.m in Sources */,
 				1EAB46131835AF840085629A /* JGSAppDelegate.m in Sources */,
 				1EAB46191835AF840085629A /* JGSViewController.m in Sources */,
@@ -461,6 +491,7 @@
 				1EAB46331835AF840085629A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1EAB46341835AF840085629A /* Build configuration list for PBXNativeTarget "GiffyTests" */ = {
 			isa = XCConfigurationList;
@@ -469,6 +500,7 @@
 				1EAB46361835AF840085629A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

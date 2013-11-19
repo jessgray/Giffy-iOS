@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface JGSViewController : UIViewController
+@interface JGSViewController : UIViewController <UITableViewDelegate>
 
 @end
