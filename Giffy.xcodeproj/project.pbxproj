@@ -10,6 +10,14 @@
 		1E94BC89184FBCA200E7D456 /* LibraryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E94BC88184FBCA200E7D456 /* LibraryViewController.m */; };
 		1E94BC8C184FBCC200E7D456 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E94BC8B184FBCC200E7D456 /* HomeViewController.m */; };
 		1E94BC8F184FBCD800E7D456 /* TrendingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E94BC8E184FBCD800E7D456 /* TrendingViewController.m */; };
+		1E94BC91184FC06E00E7D456 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E94BC90184FC06E00E7D456 /* CoreData.framework */; };
+		1E94BC93184FC0A500E7D456 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E94BC92184FC0A400E7D456 /* CoreFoundation.framework */; };
+		1E94BC96184FC10700E7D456 /* Gifs.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1E94BC94184FC10700E7D456 /* Gifs.xcdatamodeld */; };
+		1E94BC99184FC38C00E7D456 /* Gif.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E94BC98184FC38C00E7D456 /* Gif.m */; };
+		1E94BCA0184FC49000E7D456 /* DataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E94BC9B184FC49000E7D456 /* DataManager.m */; };
+		1E94BCA1184FC49000E7D456 /* DataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E94BC9E184FC49000E7D456 /* DataSource.m */; };
+		1E94BCA4184FC4B200E7D456 /* MyDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E94BCA3184FC4B200E7D456 /* MyDataManager.m */; };
+		1E94BCA7184FC7A700E7D456 /* Gif+Tag.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E94BCA6184FC7A700E7D456 /* Gif+Tag.m */; };
 		1EAB46031835AF840085629A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EAB46021835AF840085629A /* Foundation.framework */; };
 		1EAB46051835AF840085629A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EAB46041835AF840085629A /* CoreGraphics.framework */; };
 		1EAB46071835AF840085629A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EAB46061835AF840085629A /* UIKit.framework */; };
@@ -42,6 +50,21 @@
 		1E94BC8B184FBCC200E7D456 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		1E94BC8D184FBCD800E7D456 /* TrendingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrendingViewController.h; sourceTree = "<group>"; };
 		1E94BC8E184FBCD800E7D456 /* TrendingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrendingViewController.m; sourceTree = "<group>"; };
+		1E94BC90184FC06E00E7D456 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		1E94BC92184FC0A400E7D456 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+		1E94BC95184FC10700E7D456 /* Gifs.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Gifs.xcdatamodel; sourceTree = "<group>"; };
+		1E94BC97184FC38C00E7D456 /* Gif.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Gif.h; sourceTree = "<group>"; };
+		1E94BC98184FC38C00E7D456 /* Gif.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Gif.m; sourceTree = "<group>"; };
+		1E94BC9A184FC49000E7D456 /* DataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataManager.h; sourceTree = "<group>"; };
+		1E94BC9B184FC49000E7D456 /* DataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataManager.m; sourceTree = "<group>"; };
+		1E94BC9C184FC49000E7D456 /* DataManagerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataManagerDelegate.h; sourceTree = "<group>"; };
+		1E94BC9D184FC49000E7D456 /* DataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataSource.h; sourceTree = "<group>"; };
+		1E94BC9E184FC49000E7D456 /* DataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataSource.m; sourceTree = "<group>"; };
+		1E94BC9F184FC49000E7D456 /* DataSourceCellConfigurer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataSourceCellConfigurer.h; sourceTree = "<group>"; };
+		1E94BCA2184FC4B200E7D456 /* MyDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyDataManager.h; sourceTree = "<group>"; };
+		1E94BCA3184FC4B200E7D456 /* MyDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyDataManager.m; sourceTree = "<group>"; };
+		1E94BCA5184FC7A700E7D456 /* Gif+Tag.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Gif+Tag.h"; sourceTree = "<group>"; };
+		1E94BCA6184FC7A700E7D456 /* Gif+Tag.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Gif+Tag.m"; sourceTree = "<group>"; };
 		1EAB45FF1835AF840085629A /* Giffy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Giffy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1EAB46021835AF840085629A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1EAB46041835AF840085629A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -66,6 +89,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1E94BC93184FC0A500E7D456 /* CoreFoundation.framework in Frameworks */,
+				1E94BC91184FC06E00E7D456 /* CoreData.framework in Frameworks */,
 				1EAB46051835AF840085629A /* CoreGraphics.framework in Frameworks */,
 				1EAB46071835AF840085629A /* UIKit.framework in Frameworks */,
 				1EAB46031835AF840085629A /* Foundation.framework in Frameworks */,
@@ -107,6 +132,8 @@
 		1EAB46011835AF840085629A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1E94BC92184FC0A400E7D456 /* CoreFoundation.framework */,
+				1E94BC90184FC06E00E7D456 /* CoreData.framework */,
 				1EAB46021835AF840085629A /* Foundation.framework */,
 				1EAB46041835AF840085629A /* CoreGraphics.framework */,
 				1EAB46061835AF840085629A /* UIKit.framework */,
@@ -182,6 +209,19 @@
 		1EE776C3183C0D7700FCCD5B /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				1E94BC94184FC10700E7D456 /* Gifs.xcdatamodeld */,
+				1E94BC9A184FC49000E7D456 /* DataManager.h */,
+				1E94BC9B184FC49000E7D456 /* DataManager.m */,
+				1E94BC9C184FC49000E7D456 /* DataManagerDelegate.h */,
+				1E94BC9D184FC49000E7D456 /* DataSource.h */,
+				1E94BC9E184FC49000E7D456 /* DataSource.m */,
+				1E94BC9F184FC49000E7D456 /* DataSourceCellConfigurer.h */,
+				1E94BC97184FC38C00E7D456 /* Gif.h */,
+				1E94BC98184FC38C00E7D456 /* Gif.m */,
+				1E94BCA2184FC4B200E7D456 /* MyDataManager.h */,
+				1E94BCA3184FC4B200E7D456 /* MyDataManager.m */,
+				1E94BCA5184FC7A700E7D456 /* Gif+Tag.h */,
+				1E94BCA6184FC7A700E7D456 /* Gif+Tag.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -285,10 +325,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				1E94BC89184FBCA200E7D456 /* LibraryViewController.m in Sources */,
+				1E94BCA4184FC4B200E7D456 /* MyDataManager.m in Sources */,
 				1E94BC8F184FBCD800E7D456 /* TrendingViewController.m in Sources */,
+				1E94BC99184FC38C00E7D456 /* Gif.m in Sources */,
 				1EAB460F1835AF840085629A /* main.m in Sources */,
+				1E94BCA7184FC7A700E7D456 /* Gif+Tag.m in Sources */,
 				1EAB46131835AF840085629A /* JGSAppDelegate.m in Sources */,
+				1E94BCA0184FC49000E7D456 /* DataManager.m in Sources */,
+				1E94BC96184FC10700E7D456 /* Gifs.xcdatamodeld in Sources */,
 				1E94BC8C184FBCC200E7D456 /* HomeViewController.m in Sources */,
+				1E94BCA1184FC49000E7D456 /* DataSource.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -509,6 +555,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		1E94BC94184FC10700E7D456 /* Gifs.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				1E94BC95184FC10700E7D456 /* Gifs.xcdatamodel */,
+			);
+			currentVersion = 1E94BC95184FC10700E7D456 /* Gifs.xcdatamodel */;
+			path = Gifs.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 1EAB45F71835AF840085629A /* Project object */;
 }
