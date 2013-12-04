@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1E94BC89184FBCA200E7D456 /* LibraryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E94BC88184FBCA200E7D456 /* LibraryViewController.m */; };
+		1E94BC8C184FBCC200E7D456 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E94BC8B184FBCC200E7D456 /* HomeViewController.m */; };
+		1E94BC8F184FBCD800E7D456 /* TrendingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E94BC8E184FBCD800E7D456 /* TrendingViewController.m */; };
 		1EAB46031835AF840085629A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EAB46021835AF840085629A /* Foundation.framework */; };
 		1EAB46051835AF840085629A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EAB46041835AF840085629A /* CoreGraphics.framework */; };
 		1EAB46071835AF840085629A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EAB46061835AF840085629A /* UIKit.framework */; };
@@ -14,14 +17,12 @@
 		1EAB460F1835AF840085629A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EAB460E1835AF840085629A /* main.m */; };
 		1EAB46131835AF840085629A /* JGSAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EAB46121835AF840085629A /* JGSAppDelegate.m */; };
 		1EAB46161835AF840085629A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1EAB46141835AF840085629A /* Main.storyboard */; };
-		1EAB46191835AF840085629A /* JGSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EAB46181835AF840085629A /* JGSViewController.m */; };
 		1EAB461B1835AF840085629A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1EAB461A1835AF840085629A /* Images.xcassets */; };
 		1EAB46221835AF840085629A /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EAB46211835AF840085629A /* XCTest.framework */; };
 		1EAB46231835AF840085629A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EAB46021835AF840085629A /* Foundation.framework */; };
 		1EAB46241835AF840085629A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EAB46061835AF840085629A /* UIKit.framework */; };
 		1EAB462C1835AF840085629A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1EAB462A1835AF840085629A /* InfoPlist.strings */; };
 		1EAB462E1835AF840085629A /* GiffyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EAB462D1835AF840085629A /* GiffyTests.m */; };
-		1EE776C0183C0D6000FCCD5B /* MenuTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EE776BF183C0D6000FCCD5B /* MenuTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +36,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1E94BC87184FBCA200E7D456 /* LibraryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LibraryViewController.h; sourceTree = "<group>"; };
+		1E94BC88184FBCA200E7D456 /* LibraryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LibraryViewController.m; sourceTree = "<group>"; };
+		1E94BC8A184FBCC200E7D456 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		1E94BC8B184FBCC200E7D456 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		1E94BC8D184FBCD800E7D456 /* TrendingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrendingViewController.h; sourceTree = "<group>"; };
+		1E94BC8E184FBCD800E7D456 /* TrendingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrendingViewController.m; sourceTree = "<group>"; };
 		1EAB45FF1835AF840085629A /* Giffy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Giffy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1EAB46021835AF840085629A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1EAB46041835AF840085629A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -46,16 +53,12 @@
 		1EAB46111835AF840085629A /* JGSAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JGSAppDelegate.h; sourceTree = "<group>"; };
 		1EAB46121835AF840085629A /* JGSAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JGSAppDelegate.m; sourceTree = "<group>"; };
 		1EAB46151835AF840085629A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		1EAB46171835AF840085629A /* JGSViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JGSViewController.h; sourceTree = "<group>"; };
-		1EAB46181835AF840085629A /* JGSViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JGSViewController.m; sourceTree = "<group>"; };
 		1EAB461A1835AF840085629A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		1EAB46201835AF840085629A /* GiffyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GiffyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1EAB46211835AF840085629A /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		1EAB46291835AF840085629A /* GiffyTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GiffyTests-Info.plist"; sourceTree = "<group>"; };
 		1EAB462B1835AF840085629A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1EAB462D1835AF840085629A /* GiffyTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GiffyTests.m; sourceTree = "<group>"; };
-		1EE776BE183C0D6000FCCD5B /* MenuTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuTableViewController.h; sourceTree = "<group>"; };
-		1EE776BF183C0D6000FCCD5B /* MenuTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,10 +169,12 @@
 		1EE776C2183C0D7200FCCD5B /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				1EAB46171835AF840085629A /* JGSViewController.h */,
-				1EAB46181835AF840085629A /* JGSViewController.m */,
-				1EE776BE183C0D6000FCCD5B /* MenuTableViewController.h */,
-				1EE776BF183C0D6000FCCD5B /* MenuTableViewController.m */,
+				1E94BC87184FBCA200E7D456 /* LibraryViewController.h */,
+				1E94BC88184FBCA200E7D456 /* LibraryViewController.m */,
+				1E94BC8A184FBCC200E7D456 /* HomeViewController.h */,
+				1E94BC8B184FBCC200E7D456 /* HomeViewController.m */,
+				1E94BC8D184FBCD800E7D456 /* TrendingViewController.h */,
+				1E94BC8E184FBCD800E7D456 /* TrendingViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -279,10 +284,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1EE776C0183C0D6000FCCD5B /* MenuTableViewController.m in Sources */,
+				1E94BC89184FBCA200E7D456 /* LibraryViewController.m in Sources */,
+				1E94BC8F184FBCD800E7D456 /* TrendingViewController.m in Sources */,
 				1EAB460F1835AF840085629A /* main.m in Sources */,
 				1EAB46131835AF840085629A /* JGSAppDelegate.m in Sources */,
-				1EAB46191835AF840085629A /* JGSViewController.m in Sources */,
+				1E94BC8C184FBCC200E7D456 /* HomeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
