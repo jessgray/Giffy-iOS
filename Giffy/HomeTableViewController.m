@@ -7,12 +7,31 @@
 //
 
 #import "HomeTableViewController.h"
+#import "NewGifViewController.h"
+#import "DataSource.h"
+#import "MyDataManager.h"
+#import "DataManager.h"
+#import "Gif.h"
 
 @interface HomeTableViewController ()
+
+@property (nonatomic, strong) DataSource *dataSource;
+@property (nonatomic, strong) MyDataManager *myDataManager;
 
 @end
 
 @implementation HomeTableViewController
+
+- (id)initWithCoder:(NSCoder *)aDecoder {
+    self = [super initWithCoder:aDecoder];
+    if(self) {
+        _myDataManager = [[MyDataManager alloc] init];
+        _dataSource = [[DataSource alloc] initForEntity:@"Gif" sortKeys:@[@"tag"] predicate:nil sectionNameKeyPath:@"tagName" dataManagerDelegate:_myDataManager];
+        
+        _dataSource.delegate = self;
+    }
+    return self;
+}
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -40,6 +59,24 @@
     // Dispose of any resources that can be recreated.
 }
 
+#pragma mark - Data Source Cell Configurer
+- (NSString*)cellIdentifierForObject:(id)object {
+    return @"Cell";
+}
+
+- (void)configureCell:(UITableViewCell *)cell withObject:(id)object {
+    Gif *gif = object;
+    
+    // Put image here!!
+    //cell.textLabel.text = building.name;
+    
+}
+
+- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
+    return YES;
+}
+
+/*
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -64,6 +101,21 @@
     // Configure the cell...
     
     return cell;
+}*/
+
+#pragma mark - Segues
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    
+    if([segue.identifier isEqualToString:@"NewGifSegue"]) {
+        NewGifViewController *viewController = segue.destinationViewController;
+        
+        viewController.completionBlock = ^(id obj) {
+            if (obj) {
+                NSDictionary *dictionary = obj;
+                //[self.myDataManager addBuilding:dictionary];
+            }
+        };
+    }
 }
 
 /*
