@@ -1,5 +1,5 @@
 //
-//  HomeViewController.h
+//  HomeTableViewController.h
 //  Giffy
 //
 //  Created by Jessica Smith on 12/4/13.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface HomeViewController : UIViewController
+@interface HomeTableViewController : UITableViewController
 
 @end

@@ -23,24 +23,95 @@
             </objects>
             <point key="canvasLocation" x="2218" y="-86"/>
         </scene>
-        <!--Home View Controller - giffy-->
-        <scene sceneID="JXk-Bv-eiC">
+        <!--Table View Controller - giffy-->
+        <scene sceneID="vuY-z2-X4K">
             <objects>
-                <viewController id="OhU-ts-20J" customClass="HomeViewController" sceneMemberID="viewController">
+                <tableViewController id="MjQ-Cw-lyI" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Pl2-Pv-x9o">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="mCD-AY-J7g">
+                                <rect key="frame" x="0.0" y="86" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="mCD-AY-J7g" id="urf-N0-wwH">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="MjQ-Cw-lyI" id="bEI-1B-cPz"/>
+                            <outlet property="delegate" destination="MjQ-Cw-lyI" id="JOc-3N-cBt"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="giffy" id="2YV-5j-NqO">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="vp8-dg-64f">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <segue destination="96t-fM-FNa" kind="push" id="4rc-0n-T6u"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eYl-KC-8LT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2235" y="-853"/>
+        </scene>
+        <!--New Gif View Controller - Add New Gif-->
+        <scene sceneID="BZc-bT-dSO">
+            <objects>
+                <viewController id="96t-fM-FNa" customClass="NewGifViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="lsi-Zk-eja"/>
-                        <viewControllerLayoutGuide type="bottom" id="DH6-tx-qjS"/>
+                        <viewControllerLayoutGuide type="top" id="N2c-6r-Zvu"/>
+                        <viewControllerLayoutGuide type="bottom" id="vWS-nL-MyC"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Lg8-pN-z0r">
+                    <view key="view" contentMode="scaleToFill" id="dqG-6w-6Zq">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Tag" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8Yt-su-j7V">
+                                <rect key="frame" x="20" y="150" width="280" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Link" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7Zi-IZ-JyI">
+                                <rect key="frame" x="20" y="197" width="280" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Enter a tag a link for the gif. The tag will be used for searching." lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="286" translatesAutoresizingMaskIntoConstraints="NO" id="L8u-5b-Ja4">
+                                <rect key="frame" x="20" y="79" width="286" height="56"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="14"/>
+                                <color key="textColor" red="0.50196081399917603" green="0.50196081399917603" blue="0.50196081399917603" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8RE-kh-oqM">
+                                <rect key="frame" x="134" y="258" width="52" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Add Gif">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="addNewGifButton:" destination="96t-fM-FNa" eventType="touchUpInside" id="X1p-Pl-TAB"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="giffy" id="QtH-w2-7qp"/>
+                    <navigationItem key="navigationItem" title="Add New Gif" id="vYw-zf-z8v"/>
+                    <connections>
+                        <outlet property="linkTextField" destination="7Zi-IZ-JyI" id="AWf-Ez-y31"/>
+                        <outlet property="tagTextField" destination="8Yt-su-j7V" id="cCh-jg-eUL"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="wkg-mB-yiQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AEL-dL-8wB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2218" y="-853"/>
+            <point key="canvasLocation" x="2619" y="-853"/>
         </scene>
         <!--Navigation Controller - Home-->
         <scene sceneID="mQ0-ap-3gN">
@@ -55,7 +126,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="OhU-ts-20J" kind="relationship" relationship="rootViewController" id="upg-Cs-voa"/>
+                        <segue destination="MjQ-Cw-lyI" kind="relationship" relationship="rootViewController" id="Fht-1F-iFE"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SiS-0N-Tnh" userLabel="First Responder" sceneMemberID="firstResponder"/>
