@@ -17,7 +17,7 @@
 @protocol DataSourceCellConfigurer;
 @protocol DataManagerDelegate;
 
-@interface DataSource : NSObject <UICollectionViewDelegate>
+@interface DataSource : NSObject <UICollectionViewDataSource>
 
 @property (nonatomic,weak) UICollectionView *collectionView;
 @property (nonatomic,weak) id<DataSourceCellConfigurer>delegate;
@@ -28,9 +28,9 @@
 sectionNameKeyPath:(NSString*)keyPath
 dataManagerDelegate:(id<DataManagerDelegate>)dataManagerDelegate;
 
--(id)objectAtIndexPath:(NSIndexPath *)indexPath;
+/*-(id)objectAtIndexPath:(NSIndexPath *)indexPath;
 -(NSIndexPath*)indexPathForObject:(id)object;
--(void)deleteRowAtIndexPath:(NSIndexPath *)indexPath;
+-(void)deleteRowAtIndexPath:(NSIndexPath *)indexPath;*/
 
 // peform fetch again due to changes in managed object context (objects added/deleted)
 -(void)update;

@@ -26,7 +26,18 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        // Custom initialization
+        /*// Custom initialization
+        _myDataManager = [[MyDataManager alloc] init];
+        _dataSource = [[DataSource alloc] initForEntity:@"Gif" sortKeys:@[@"tag"] predicate:nil sectionNameKeyPath:nil dataManagerDelegate:_myDataManager];
+        
+        _dataSource.delegate = self;*/
+    }
+    return self;
+}
+
+- (id)initWithCoder:(NSCoder *)aDecoder {
+    self = [super initWithCoder:aDecoder];
+    if(self) {
         _myDataManager = [[MyDataManager alloc] init];
         _dataSource = [[DataSource alloc] initForEntity:@"Gif" sortKeys:@[@"tag"] predicate:nil sectionNameKeyPath:nil dataManagerDelegate:_myDataManager];
         
@@ -35,10 +46,17 @@
     return self;
 }
 
+/*- (void) awakeFromNib {
+    [super awakeFromNib];
+}*/
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    
+    self.collectionView.dataSource = self.dataSource;
+    self.dataSource.collectionView = self.collectionView;
 }
 
 - (void)didReceiveMemoryWarning

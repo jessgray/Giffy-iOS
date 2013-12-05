@@ -119,8 +119,7 @@ dataManagerDelegate:(id<DataManagerDelegate>)dataManagerDelegate {
 }
 
 
-
-- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+/*- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
     id <NSFetchedResultsSectionInfo> sectionInfo = [[self.fetchedResultsController sections] objectAtIndex:section];
     return [sectionInfo name];
 }
@@ -169,7 +168,7 @@ dataManagerDelegate:(id<DataManagerDelegate>)dataManagerDelegate {
     NSManagedObjectContext *context = self.fetchedResultsController.managedObjectContext;
     [context deleteObject:managedObject];
     [context save:nil];  // really should error check here! // better to save lazily, when app terminates
-}
+}*/
 
 -(void)update {
     NSError *error;
