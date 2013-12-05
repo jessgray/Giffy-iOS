@@ -9,5 +9,7 @@
 #import "Gif.h"
 
 @interface Gif (Tag)
+
 - (NSString *)tagName;
+
 @end

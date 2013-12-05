@@ -41,10 +41,6 @@
     return self;
 }
 
-/*- (void) awakeFromNib {
-    [super awakeFromNib];
-}*/
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -52,6 +48,12 @@
     
     self.collectionView.dataSource = self.dataSource;
     self.dataSource.collectionView = self.collectionView;
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
+    [self.collectionView reloadData];
 }
 
 - (void)didReceiveMemoryWarning

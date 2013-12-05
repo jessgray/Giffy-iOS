@@ -73,7 +73,7 @@ dataManagerDelegate:(id<DataManagerDelegate>)dataManagerDelegate {
 
 
 
-// if we set a tableView, then we want to support the delegate methods for
+// if we set a collectionView, then we want to support the delegate methods for
 // the fetched results controller
 -(void)setCollectionView:(UICollectionView *)collectionView {
     _collectionView = collectionView;
@@ -83,8 +83,6 @@ dataManagerDelegate:(id<DataManagerDelegate>)dataManagerDelegate {
         self.fetchedResultsController.delegate = nil;
     }
 }
-
-
 
 
 #pragma mark - Collection View Data Source
