@@ -1,5 +1,5 @@
 //
-//  HomeTableViewController.h
+//  HomeCollectionViewController.h
 //  Giffy
 //
 //  Created by Jessica Smith on 12/4/13.
@@ -9,6 +9,6 @@
 #import <UIKit/UIKit.h>
 #import "DataSourceCellConfigurer.h"
 
-@interface HomeTableViewController : UITableViewController <DataSourceCellConfigurer>
+@interface HomeCollectionViewController : UICollectionViewController <DataSourceCellConfigurer>
 
 @end

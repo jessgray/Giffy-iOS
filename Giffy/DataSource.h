@@ -17,9 +17,9 @@
 @protocol DataSourceCellConfigurer;
 @protocol DataManagerDelegate;
 
-@interface DataSource : NSObject <UITableViewDataSource>
+@interface DataSource : NSObject <UICollectionViewDelegate>
 
-@property (nonatomic,weak) UITableView *tableView;
+@property (nonatomic,weak) UICollectionView *collectionView;
 @property (nonatomic,weak) id<DataSourceCellConfigurer>delegate;
 
 -(id)initForEntity:(NSString *)name
