@@ -26,7 +26,7 @@
     self = [super initWithCoder:aDecoder];
     if(self) {
         _myDataManager = [[MyDataManager alloc] init];
-        _dataSource = [[DataSource alloc] initForEntity:@"Gif" sortKeys:@[@"tag"] predicate:nil sectionNameKeyPath:@"tagName" dataManagerDelegate:_myDataManager];
+        _dataSource = [[DataSource alloc] initForEntity:@"Gif" sortKeys:@[@"tag"] predicate:nil sectionNameKeyPath:nil dataManagerDelegate:_myDataManager];
         
         _dataSource.delegate = self;
     }
@@ -45,6 +45,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    self.tableView.dataSource = self.dataSource;
+    self.dataSource.tableView = self.tableView;
 
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -67,9 +70,7 @@
 - (void)configureCell:(UITableViewCell *)cell withObject:(id)object {
     Gif *gif = object;
     
-    // Put image here!!
-    //cell.textLabel.text = building.name;
-    
+    cell.imageView.image = [[UIImage alloc] initWithData:gif.photo];
 }
 
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -112,7 +113,7 @@
         viewController.completionBlock = ^(id obj) {
             if (obj) {
                 NSDictionary *dictionary = obj;
-                //[self.myDataManager addBuilding:dictionary];
+                [self.myDataManager addGif:dictionary];
             }
         };
     }

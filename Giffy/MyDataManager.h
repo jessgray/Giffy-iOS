@@ -11,4 +11,6 @@
 
 @interface MyDataManager : NSObject <DataManagerDelegate>
 
+- (void)addGif:(NSDictionary *)dictionary;
+
 @end

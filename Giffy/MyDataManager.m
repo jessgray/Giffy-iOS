@@ -38,4 +38,20 @@
     [dataManager saveContext];
 }
 
+- (void)addGif:(NSDictionary *)dictionary {
+    DataManager *dataManager = [DataManager sharedInstance];
+    NSManagedObjectContext *managedObjectContext = dataManager.managedObjectContext;
+    
+    Gif *gif = [NSEntityDescription insertNewObjectForEntityForName:@"Gif" inManagedObjectContext:managedObjectContext];
+    
+    gif.tag = [dictionary objectForKey:@"tag"];
+    gif.url = [dictionary objectForKey:@"url"];
+    
+    NSURL *photoUrl = [NSURL URLWithString:gif.url];
+    gif.photo = [NSData dataWithContentsOfURL:photoUrl];
+    
+    [dataManager saveContext];
+    
+}
+
 @end

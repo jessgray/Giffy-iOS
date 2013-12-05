@@ -11,7 +11,7 @@
 @implementation Gif (Tag)
 
 - (NSString *)tagName {
-    NSString *tag = self.tag;
+    NSString *tag = [self.tag substringToIndex:1];
     
     return tag;
 }
