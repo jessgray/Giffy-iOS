@@ -26,11 +26,6 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        /*// Custom initialization
-        _myDataManager = [[MyDataManager alloc] init];
-        _dataSource = [[DataSource alloc] initForEntity:@"Gif" sortKeys:@[@"tag"] predicate:nil sectionNameKeyPath:nil dataManagerDelegate:_myDataManager];
-        
-        _dataSource.delegate = self;*/
     }
     return self;
 }
@@ -74,7 +69,15 @@
     Gif *gif = object;
     
     UIImage *image = [[UIImage alloc] initWithData:gif.photo];
-    [cell.contentView addSubview:[[UIImageView alloc] initWithImage:image]];
+    UIImageView *imageView = [[UIImageView alloc] initWithImage:image];
+    
+    // Resize image to fit in the collection view cell
+    imageView.frame = CGRectMake(imageView.frame.origin.x, imageView.frame.origin.y, cell.contentView.frame.size.width, cell.contentView.frame.size.height);
+    
+    // Make image square (cropping some pieces of the image out if necessary)
+    imageView.contentMode = UIViewContentModeScaleAspectFill;
+    
+    [cell.contentView addSubview:imageView];
 }
 
 #pragma mark - Segues

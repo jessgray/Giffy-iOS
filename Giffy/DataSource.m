@@ -118,58 +118,6 @@ dataManagerDelegate:(id<DataManagerDelegate>)dataManagerDelegate {
     return cell;
 }
 
-
-/*- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
-    id <NSFetchedResultsSectionInfo> sectionInfo = [[self.fetchedResultsController sections] objectAtIndex:section];
-    return [sectionInfo name];
-}
-
-- (NSArray *)sectionIndexTitlesForTableView:(UITableView *)tableView {
-    return [self.fetchedResultsController sectionIndexTitles];
-
-}
-
-- (NSInteger)tableView:(UITableView *)tableView sectionForSectionIndexTitle:(NSString *)title atIndex:(NSInteger)index {
-    return [self.fetchedResultsController sectionForSectionIndexTitle:title atIndex:index];
-}
-
-
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source & delegate will take care of the table View
-        [self deleteRowAtIndexPath:indexPath];
-    }
-    else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        // Not supported yet!
-    }
-    
-    
-}
-
-
-
-#pragma mark -  tableView Delegate might need these
--(id)objectAtIndexPath:(NSIndexPath *)indexPath {
-    NSManagedObject *managedObject = [self.fetchedResultsController objectAtIndexPath:indexPath];
-    return managedObject;
-}
-
--(NSIndexPath*)indexPathForObject:(id)object {
-    [self update];  // object was typically just added to managed context
-    NSIndexPath *indexPath = [self.fetchedResultsController indexPathForObject:object];
-    return indexPath;
-}
-
--(void)deleteRowAtIndexPath:(NSIndexPath *)indexPath {
-    NSManagedObject *managedObject = [self.fetchedResultsController objectAtIndexPath:indexPath];
-    NSManagedObjectContext *context = self.fetchedResultsController.managedObjectContext;
-    [context deleteObject:managedObject];
-    [context save:nil];  // really should error check here! // better to save lazily, when app terminates
-}*/
-
 -(void)update {
     NSError *error;
     [self.fetchedResultsController performFetch:&error];
