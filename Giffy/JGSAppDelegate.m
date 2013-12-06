@@ -13,6 +13,15 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    
+    [[UIBarButtonItem appearanceWhenContainedIn:[UINavigationController class], nil] setTintColor:[UIColor whiteColor]];
+    
+    /*[UIBarButtonItem appearance].tintColor = [UIColor whiteColor];
+    
+    [[UIBarButtonItem appearance] setTintColor:[UIColor whiteColor]];
+    [[UIButton appearance] setTintColor:[UIColor whiteColor]];
+    [[UILabel appearance] setTintColor:[UIColor whiteColor]];*/
+    
     return YES;
 }
 							

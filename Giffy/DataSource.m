@@ -44,8 +44,8 @@ dataManagerDelegate:(id<DataManagerDelegate>)dataManagerDelegate {
             
             NSSortDescriptor *sortDescriptor;
             
-            // Sort ascending or descending depending on sort key
-            if([key isEqualToString:@"date"]) {
+            // Sort ascending or descending depending on key path
+            if([keyPath isEqualToString:@"date"]) {
                 sortDescriptor = [[NSSortDescriptor alloc] initWithKey:key ascending:NO];
             } else {
                 sortDescriptor = [[NSSortDescriptor alloc] initWithKey:key ascending:YES];
