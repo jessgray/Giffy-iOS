@@ -51,7 +51,7 @@
     self.dataSource.collectionView = self.collectionView;
     
     UICollectionViewFlowLayout *collectionViewLayout = (UICollectionViewFlowLayout *)self.collectionView.collectionViewLayout;
-    collectionViewLayout.sectionInset = UIEdgeInsetsMake(0, 10, 20, 10);
+    collectionViewLayout.sectionInset = UIEdgeInsetsMake(10, 10, 20, 10);
     
 }
 
