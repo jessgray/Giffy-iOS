@@ -28,6 +28,7 @@
         Gif *gif = [NSEntityDescription insertNewObjectForEntityForName:@"Gif" inManagedObjectContext:managedObjectContext];
         
         gif.tag = [dictionary objectForKey:@"tag"];
+        gif.date = [dictionary objectForKey:@"date"];
         gif.url = [dictionary objectForKey:@"url"];
         
         NSURL *photoUrl = [NSURL URLWithString:gif.url];
@@ -45,6 +46,7 @@
     Gif *gif = [NSEntityDescription insertNewObjectForEntityForName:@"Gif" inManagedObjectContext:managedObjectContext];
     
     gif.tag = [dictionary objectForKey:@"tag"];
+    gif.date = [dictionary objectForKey:@"date"];
     gif.url = [dictionary objectForKey:@"url"];
     
     NSURL *photoUrl = [NSURL URLWithString:gif.url];

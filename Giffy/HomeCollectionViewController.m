@@ -34,7 +34,7 @@
     self = [super initWithCoder:aDecoder];
     if(self) {
         _myDataManager = [[MyDataManager alloc] init];
-        _dataSource = [[DataSource alloc] initForEntity:@"Gif" sortKeys:@[@"tag"] predicate:nil sectionNameKeyPath:nil dataManagerDelegate:_myDataManager];
+        _dataSource = [[DataSource alloc] initForEntity:@"Gif" sortKeys:@[@"date"] predicate:nil sectionNameKeyPath:@"date" dataManagerDelegate:_myDataManager];
         
         _dataSource.delegate = self;
     }

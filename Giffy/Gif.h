@@ -11,6 +11,7 @@
 
 @interface Gif : NSManagedObject
 
+@property (nonatomic, retain) NSDate *date;
 @property (nonatomic, retain) NSString *tag;
 @property (nonatomic, retain) NSString *url;
 @property (nonatomic, retain) NSData *photo;

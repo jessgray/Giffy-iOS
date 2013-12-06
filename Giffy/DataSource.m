@@ -40,8 +40,16 @@ dataManagerDelegate:(id<DataManagerDelegate>)dataManagerDelegate {
         // create array of sort descriptors from array of sort keys
         NSMutableArray *sortDescriptors = [[NSMutableArray alloc]init];
         for (NSString *key in sortKeys) {
-            NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:key
-                                                                           ascending:YES];
+            
+            NSSortDescriptor *sortDescriptor;
+            
+            // Sort ascending or descending depending on sort key
+            if([key isEqualToString:@"date"]) {
+                sortDescriptor = [[NSSortDescriptor alloc] initWithKey:key ascending:NO];
+            } else {
+                sortDescriptor = [[NSSortDescriptor alloc] initWithKey:key ascending:YES];
+            }
+            
             [sortDescriptors addObject:sortDescriptor];
         }
         

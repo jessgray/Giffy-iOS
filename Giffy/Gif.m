@@ -10,6 +10,7 @@
 
 @implementation Gif
 
+@dynamic date;
 @dynamic tag;
 @dynamic url;
 @dynamic photo;

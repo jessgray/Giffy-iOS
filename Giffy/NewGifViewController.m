@@ -65,7 +65,15 @@
         
         [message show];
     } else {
-        NSDictionary *dictionary = @{@"tag":self.tagTextField.text, @"url":self.linkTextField.text};
+        
+        // Create date that has no minutes, hours, or seconds
+        NSDate *date = [[NSDate alloc] init];
+        unsigned int flags = NSYearCalendarUnit | NSMonthCalendarUnit | NSDayCalendarUnit;
+        NSCalendar *calendar = [NSCalendar currentCalendar];
+        NSDateComponents *components = [calendar components:flags fromDate:date];
+        NSDate *dateOnly = [calendar dateFromComponents:components];
+        
+        NSDictionary *dictionary = @{@"tag":self.tagTextField.text, @"date":dateOnly, @"url":self.linkTextField.text};
         self.completionBlock(dictionary);
     }
 }
