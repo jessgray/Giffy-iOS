@@ -12,6 +12,7 @@
 #import "DataManager.h"
 #import "Gif.h"
 #import "NewGifViewController.h"
+#import "HomeCollectionHeaderView.h"
 
 @interface HomeCollectionViewController ()
 
@@ -34,7 +35,7 @@
     self = [super initWithCoder:aDecoder];
     if(self) {
         _myDataManager = [[MyDataManager alloc] init];
-        _dataSource = [[DataSource alloc] initForEntity:@"Gif" sortKeys:@[@"date"] predicate:nil sectionNameKeyPath:@"date" dataManagerDelegate:_myDataManager];
+        _dataSource = [[DataSource alloc] initForEntity:@"Gif" sortKeys:@[@"tag"] predicate:nil sectionNameKeyPath:@"tag" dataManagerDelegate:_myDataManager];
         
         _dataSource.delegate = self;
     }
@@ -48,6 +49,10 @@
     
     self.collectionView.dataSource = self.dataSource;
     self.dataSource.collectionView = self.collectionView;
+    
+    UICollectionViewFlowLayout *collectionViewLayout = (UICollectionViewFlowLayout *)self.collectionView.collectionViewLayout;
+    collectionViewLayout.sectionInset = UIEdgeInsetsMake(0, 10, 20, 10);
+    
 }
 
 - (void)viewWillAppear:(BOOL)animated {

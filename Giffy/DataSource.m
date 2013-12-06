@@ -10,6 +10,7 @@
 #import "DataManagerDelegate.h"
 #import "DataSourceCellConfigurer.h"
 #import <CoreData/CoreData.h>
+#import "HomeCollectionHeaderView.h"
 
 @interface DataSource () <NSFetchedResultsControllerDelegate>
 
@@ -122,6 +123,23 @@ dataManagerDelegate:(id<DataManagerDelegate>)dataManagerDelegate {
     [self.delegate configureCell:cell withObject:managedObject];
     
     return cell;
+}
+
+- (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath {
+    
+    UICollectionReusableView *reusableView = nil;
+    
+    if(kind == UICollectionElementKindSectionHeader) {
+        HomeCollectionHeaderView *headerView = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"HeaderView" forIndexPath:indexPath];
+        
+        // Set section title
+        id <NSFetchedResultsSectionInfo> sectionInfo = [self.fetchedResultsController sections][[indexPath section]];
+        headerView.headerTitle.text = [sectionInfo name];
+
+        reusableView = headerView;
+    }
+    
+    return reusableView;
 }
 
 -(void)update {

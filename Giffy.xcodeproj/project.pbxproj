@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1E12B6E718500D2700E0E3DA /* HomeCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E12B6E618500D2700E0E3DA /* HomeCollectionViewController.m */; };
+		1E74A5141851682A009F2BC2 /* HomeCollectionHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E74A5131851682A009F2BC2 /* HomeCollectionHeaderView.m */; };
 		1E94BC89184FBCA200E7D456 /* LibraryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E94BC88184FBCA200E7D456 /* LibraryViewController.m */; };
 		1E94BC8F184FBCD800E7D456 /* TrendingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E94BC8E184FBCD800E7D456 /* TrendingViewController.m */; };
 		1E94BC91184FC06E00E7D456 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E94BC90184FC06E00E7D456 /* CoreData.framework */; };
@@ -47,6 +48,8 @@
 /* Begin PBXFileReference section */
 		1E12B6E518500D2700E0E3DA /* HomeCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeCollectionViewController.h; sourceTree = "<group>"; };
 		1E12B6E618500D2700E0E3DA /* HomeCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeCollectionViewController.m; sourceTree = "<group>"; };
+		1E74A5121851682A009F2BC2 /* HomeCollectionHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeCollectionHeaderView.h; sourceTree = "<group>"; };
+		1E74A5131851682A009F2BC2 /* HomeCollectionHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeCollectionHeaderView.m; sourceTree = "<group>"; };
 		1E94BC87184FBCA200E7D456 /* LibraryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LibraryViewController.h; sourceTree = "<group>"; };
 		1E94BC88184FBCA200E7D456 /* LibraryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LibraryViewController.m; sourceTree = "<group>"; };
 		1E94BC8D184FBCD800E7D456 /* TrendingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrendingViewController.h; sourceTree = "<group>"; };
@@ -120,6 +123,8 @@
 				1E94BCAF184FCBDF00E7D456 /* NewGifViewController.m */,
 				1E12B6E518500D2700E0E3DA /* HomeCollectionViewController.h */,
 				1E12B6E618500D2700E0E3DA /* HomeCollectionViewController.m */,
+				1E74A5121851682A009F2BC2 /* HomeCollectionHeaderView.h */,
+				1E74A5131851682A009F2BC2 /* HomeCollectionHeaderView.m */,
 			);
 			name = Home;
 			sourceTree = "<group>";
@@ -359,6 +364,7 @@
 				1E94BC99184FC38C00E7D456 /* Gif.m in Sources */,
 				1E94BCB0184FCBDF00E7D456 /* NewGifViewController.m in Sources */,
 				1EAB460F1835AF840085629A /* main.m in Sources */,
+				1E74A5141851682A009F2BC2 /* HomeCollectionHeaderView.m in Sources */,
 				1E12B6E718500D2700E0E3DA /* HomeCollectionViewController.m in Sources */,
 				1E94BCA7184FC7A700E7D456 /* Gif+Tag.m in Sources */,
 				1EAB46131835AF840085629A /* JGSAppDelegate.m in Sources */,
