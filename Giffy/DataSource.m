@@ -132,9 +132,29 @@ dataManagerDelegate:(id<DataManagerDelegate>)dataManagerDelegate {
     if(kind == UICollectionElementKindSectionHeader) {
         HomeCollectionHeaderView *headerView = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"HeaderView" forIndexPath:indexPath];
         
+        
         // Set section title
         id <NSFetchedResultsSectionInfo> sectionInfo = [self.fetchedResultsController sections][[indexPath section]];
-        headerView.headerTitle.text = [sectionInfo name];
+        
+       if([[self.fetchedResultsController sectionNameKeyPath] isEqualToString:@"date"]) {
+           
+           // Create date formatter
+           NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+           [dateFormatter setDateFormat:@"yyyy-MM-dd HH:mm:ss Z"];
+           
+           // Get date string from section name
+           NSString *dateString = (NSString *)[sectionInfo name];
+           NSDate *date = [dateFormatter dateFromString:dateString];
+           
+           // Format date so it displays as month day
+           [dateFormatter setDateFormat:@"MMM dd"];
+           NSString *newDate = [dateFormatter stringFromDate:date];
+            
+            headerView.headerTitle.text = newDate;
+        } else {
+            headerView.headerTitle.text = [sectionInfo name];
+
+        }
 
         reusableView = headerView;
     }
