@@ -4,25 +4,6 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
     </dependencies>
     <scenes>
-        <!--Library View Controller - Library-->
-        <scene sceneID="osR-3i-DC4">
-            <objects>
-                <viewController id="rQs-oR-tvC" customClass="LibraryViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="0NY-Ud-tZP"/>
-                        <viewControllerLayoutGuide type="bottom" id="5Ar-2O-7wE"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="q3F-6K-413">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="Library" id="eRl-30-qtD"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="b5s-2P-qzZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2218" y="-86"/>
-        </scene>
         <!--Home Collection View Controller - giffy-->
         <scene sceneID="ZZA-az-rqT">
             <objects>
@@ -71,6 +52,11 @@
                         </connections>
                     </collectionView>
                     <navigationItem key="navigationItem" title="giffy" id="9bk-im-Ynw">
+                        <barButtonItem key="leftBarButtonItem" title="Select" id="iJD-6Z-CcJ">
+                            <connections>
+                                <segue destination="Iod-H4-0ph" kind="push" id="6L6-PS-0ku"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="URb-5y-ffL">
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
@@ -82,6 +68,94 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="haN-Dp-Rzz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2256" y="-853"/>
+        </scene>
+        <!--Collection View Controller-->
+        <scene sceneID="1Td-90-9cc">
+            <objects>
+                <collectionViewController autoresizesArchivedViewToFullSize="NO" id="Iod-H4-0ph" sceneMemberID="viewController">
+                    <collectionView key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="prototypes" id="00Y-AI-KC4">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="nXU-Nu-Z2Z">
+                            <size key="itemSize" width="50" height="50"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="ufn-PJ-ccW">
+                                <rect key="frame" x="0.0" y="64" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="Iod-H4-0ph" id="H3g-pd-FdW"/>
+                            <outlet property="delegate" destination="Iod-H4-0ph" id="ERA-wQ-Vhu"/>
+                        </connections>
+                    </collectionView>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LgI-cF-HRy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2741" y="-1015"/>
+        </scene>
+        <!--Library Collection View Controller - Library-->
+        <scene sceneID="TAB-TF-pxj">
+            <objects>
+                <collectionViewController autoresizesArchivedViewToFullSize="NO" id="ItU-Lg-4Sb" customClass="LibraryCollectionViewController" sceneMemberID="viewController">
+                    <collectionView key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="prototypes" id="gDY-wY-sqs">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="x6v-j4-dML">
+                            <size key="itemSize" width="50" height="50"/>
+                            <size key="headerReferenceSize" width="50" height="25"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="LibraryCell" id="Rdt-3X-IH2">
+                                <rect key="frame" x="0.0" y="89" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                            </collectionViewCell>
+                        </cells>
+                        <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="LibraryHeaderView" id="2aV-6r-fQp" customClass="HomeCollectionHeaderView">
+                            <rect key="frame" x="0.0" y="64" width="320" height="25"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                            <subviews>
+                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MYj-3D-asM">
+                                    <rect key="frame" x="20" y="2" width="280" height="21"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="15"/>
+                                    <color key="textColor" red="0.29280124260000001" green="0.76532778530000001" blue="0.61181835600000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <outlet property="headerTitle" destination="MYj-3D-asM" id="u2F-ym-edx"/>
+                            </connections>
+                        </collectionReusableView>
+                        <connections>
+                            <outlet property="dataSource" destination="ItU-Lg-4Sb" id="ni8-P8-2WQ"/>
+                            <outlet property="delegate" destination="ItU-Lg-4Sb" id="Daa-Au-iyS"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" title="Library" id="L4K-sS-WnV"/>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="z41-u9-eLu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2236" y="-86"/>
         </scene>
         <!--New Gif View Controller - Add New Gif-->
         <scene sceneID="BZc-bT-dSO">
@@ -135,7 +209,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AEL-dL-8wB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2711" y="-853"/>
+            <point key="canvasLocation" x="2704" y="-314"/>
         </scene>
         <!--Navigation Controller - Home-->
         <scene sceneID="mQ0-ap-3gN">
@@ -187,11 +261,12 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="A4O-fT-uLk">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="barTintColor" red="0.29280124260000001" green="0.76532778530000001" blue="0.61181835600000001" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="rQs-oR-tvC" kind="relationship" relationship="rootViewController" id="nlR-zC-xqS"/>
+                        <segue destination="ItU-Lg-4Sb" kind="relationship" relationship="rootViewController" id="Xvs-RH-x6p"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fg4-6s-nbV" userLabel="First Responder" sceneMemberID="firstResponder"/>

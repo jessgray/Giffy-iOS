@@ -1,27 +1,26 @@
 //
-//  HomeCollectionViewController.m
+//  LibraryCollectionViewController.m
 //  Giffy
 //
-//  Created by Jessica Smith on 12/4/13.
+//  Created by Jessica Smith on 12/7/13.
 //  Copyright (c) 2013 Jessica Smith. All rights reserved.
 //
 
-#import "HomeCollectionViewController.h"
+#import "LibraryCollectionViewController.h"
 #import "DataSource.h"
 #import "MyDataManager.h"
 #import "DataManager.h"
 #import "Gif.h"
-#import "NewGifViewController.h"
 #import "HomeCollectionHeaderView.h"
 
-@interface HomeCollectionViewController ()
+@interface LibraryCollectionViewController ()
 
 @property (nonatomic, strong) DataSource *dataSource;
 @property (nonatomic, strong) MyDataManager *myDataManager;
 
 @end
 
-@implementation HomeCollectionViewController
+@implementation LibraryCollectionViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -35,7 +34,7 @@
     self = [super initWithCoder:aDecoder];
     if(self) {
         _myDataManager = [[MyDataManager alloc] init];
-        _dataSource = [[DataSource alloc] initForEntity:@"Gif" sortKeys:@[@"tag"] predicate:nil sectionNameKeyPath:@"date" dataManagerDelegate:_myDataManager];
+        _dataSource = [[DataSource alloc] initForEntity:@"Gif" sortKeys:@[@"tag"] predicate:nil sectionNameKeyPath:@"tag" dataManagerDelegate:_myDataManager];
         
         _dataSource.delegate = self;
     }
@@ -69,11 +68,11 @@
 
 #pragma mark - Collection View Data Source
 - (NSString *)cellIdentifierForObject:(id)object {
-    return @"Cell";
+    return @"LibraryCell";
 }
 
 - (NSString *)headerIdentifierForObject:(id)object {
-    return @"HeaderView";
+    return @"LibraryHeaderView";
 }
 
 - (void)configureCell:(UICollectionViewCell*)cell withObject:(id)object {
@@ -91,19 +90,5 @@
     [cell.contentView addSubview:imageView];
 }
 
-#pragma mark - Segues
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    
-    if([segue.identifier isEqualToString:@"NewGifSegue"]) {
-        NewGifViewController *viewController = segue.destinationViewController;
-        
-        viewController.completionBlock = ^(id obj) {
-            if (obj) {
-                NSDictionary *dictionary = obj;
-                [self.myDataManager addGif:dictionary];
-            }
-        };
-    }
-}
 
 @end

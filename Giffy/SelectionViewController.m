@@ -1,18 +1,18 @@
 //
-//  LibraryViewController.m
+//  SelectionViewController.m
 //  Giffy
 //
-//  Created by Jessica Smith on 12/4/13.
+//  Created by Jessica Smith on 12/6/13.
 //  Copyright (c) 2013 Jessica Smith. All rights reserved.
 //
 
-#import "LibraryViewController.h"
+#import "SelectionViewController.h"
 
-@interface LibraryViewController ()
+@interface SelectionViewController ()
 
 @end
 
-@implementation LibraryViewController
+@implementation SelectionViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -28,6 +28,10 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     
+    SelectionViewController *myController = [[SelectionViewController alloc] init];
+    myController.hidesBottomBarWhenPushed = YES;
+    
+    [self.navigationController pushViewController:myController animated:YES];
 }
 
 - (void)didReceiveMemoryWarning
@@ -35,6 +39,5 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
 
 @end

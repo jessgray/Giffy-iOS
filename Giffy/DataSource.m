@@ -130,7 +130,13 @@ dataManagerDelegate:(id<DataManagerDelegate>)dataManagerDelegate {
     UICollectionReusableView *reusableView = nil;
     
     if(kind == UICollectionElementKindSectionHeader) {
-        HomeCollectionHeaderView *headerView = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"HeaderView" forIndexPath:indexPath];
+        
+        // Get header identifier
+        NSManagedObject *managedObject = [self.fetchedResultsController objectAtIndexPath:indexPath];
+        NSString *headerIdentifier = [self.delegate headerIdentifierForObject:managedObject];
+        
+        
+        HomeCollectionHeaderView *headerView = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:headerIdentifier forIndexPath:indexPath];
         
         
         // Set section title
@@ -152,7 +158,7 @@ dataManagerDelegate:(id<DataManagerDelegate>)dataManagerDelegate {
             
             headerView.headerTitle.text = newDate;
         } else {
-            headerView.headerTitle.text = [sectionInfo name];
+            headerView.headerTitle.text = (NSString *)[sectionInfo name];
 
         }
 
