@@ -12,7 +12,7 @@
 #import "DataManager.h"
 #import "Gif.h"
 #import "NewGifViewController.h"
-#import "HomeCollectionHeaderView.h"
+#import "ViewGifViewController.h"
 
 @interface HomeCollectionViewController ()
 
@@ -103,6 +103,14 @@
                 [self.myDataManager addGif:dictionary];
             }
         };
+    } else if([segue.identifier isEqualToString:@"ViewGifSegue"]) {
+        ViewGifViewController *viewController = segue.destinationViewController;
+        
+        // Use dataSource tableview since it will always be the current one
+        NSIndexPath *indexPath = [self.dataSource.collectionView indexPathsForSelectedItems][0];
+        
+        Gif *gif = [self.dataSource objectAtIndexPath:indexPath];
+        viewController.gifData = gif.photo;
     }
 }
 

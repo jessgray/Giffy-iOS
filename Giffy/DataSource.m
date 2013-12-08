@@ -94,6 +94,45 @@ dataManagerDelegate:(id<DataManagerDelegate>)dataManagerDelegate {
 }
 
 
+#pragma mark - Collection View Delegate Might Need These
+-(id)objectAtIndexPath:(NSIndexPath *)indexPath {
+    NSManagedObject *managedObject = [self.fetchedResultsController objectAtIndexPath:indexPath];
+    return managedObject;
+}
+
+-(NSIndexPath*)indexPathForObject:(id)object {
+    [self update];  // object was typically just added to managed context
+    NSIndexPath *indexPath = [self.fetchedResultsController indexPathForObject:object];
+    return indexPath;
+}
+
+-(void)deleteRowAtIndexPath:(NSIndexPath *)indexPath {
+    NSManagedObject *managedObject = [self.fetchedResultsController objectAtIndexPath:indexPath];
+    NSManagedObjectContext *context = self.fetchedResultsController.managedObjectContext;
+    [context deleteObject:managedObject];
+    [context save:nil];  // really should error check here! // better to save lazily, when app terminates
+}
+
+-(void)update {
+    NSError *error;
+    [self.fetchedResultsController performFetch:&error];
+    if (error) {
+        NSLog(@"Fetch update failed: %@", [error description]);
+    }
+}
+
+-(void)updateWithPredicate:(NSPredicate*)predicate {
+    self.fetchRequest.predicate = predicate;
+    
+    // Perform the fetch again.  Just in case, check for errors
+    NSError *error;
+    BOOL result = [self.fetchedResultsController performFetch:&error];
+    if (!result) {
+        NSLog(@"Fetch failed: %@", [error description]);
+    }
+}
+
+
 #pragma mark - Collection View Data Source
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
@@ -166,25 +205,6 @@ dataManagerDelegate:(id<DataManagerDelegate>)dataManagerDelegate {
     }
     
     return reusableView;
-}
-
--(void)update {
-    NSError *error;
-    [self.fetchedResultsController performFetch:&error];
-    if (error) {
-        NSLog(@"Fetch update failed: %@", [error description]);
-    }
-}
-
--(void)updateWithPredicate:(NSPredicate*)predicate {
-    self.fetchRequest.predicate = predicate;
-    
-    // Perform the fetch again.  Just in case, check for errors
-    NSError *error;
-    BOOL result = [self.fetchedResultsController performFetch:&error];
-    if (!result) {
-        NSLog(@"Fetch failed: %@", [error description]);
-    }
 }
 
 
