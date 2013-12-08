@@ -27,6 +27,9 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
+                                <connections>
+                                    <segue destination="UJ1-XW-sXa" kind="push" identifier="ViewGifSegue" id="buj-L0-YyQ"/>
+                                </connections>
                             </collectionViewCell>
                         </cells>
                         <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="HeaderView" id="YPC-ap-C53" customClass="HomeCollectionHeaderView">
@@ -67,7 +70,7 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="haN-Dp-Rzz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2256" y="-853"/>
+            <point key="canvasLocation" x="2256" y="-1565"/>
         </scene>
         <!--Collection View Controller-->
         <scene sceneID="1Td-90-9cc">
@@ -102,7 +105,7 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LgI-cF-HRy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2741" y="-1015"/>
+            <point key="canvasLocation" x="2773" y="-1962"/>
         </scene>
         <!--Library Collection View Controller - Library-->
         <scene sceneID="TAB-TF-pxj">
@@ -209,7 +212,35 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AEL-dL-8wB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2704" y="-314"/>
+            <point key="canvasLocation" x="2773" y="-1278"/>
+        </scene>
+        <!--View Gif View Controller - View Gif-->
+        <scene sceneID="VcD-Xj-22t">
+            <objects>
+                <viewController id="UJ1-XW-sXa" customClass="ViewGifViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="XgY-1l-2u7"/>
+                        <viewControllerLayoutGuide type="bottom" id="sbn-N0-0UO"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Xgy-r2-zof">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dsz-uE-qjP">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="View Gif" id="oHN-nb-A1o"/>
+                    <connections>
+                        <outlet property="scrollView" destination="dsz-uE-qjP" id="pN7-Xp-6hB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ICo-cw-WV6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2773" y="-611"/>
         </scene>
         <!--Navigation Controller - Home-->
         <scene sceneID="mQ0-ap-3gN">
@@ -230,7 +261,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SiS-0N-Tnh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1692" y="-853"/>
+            <point key="canvasLocation" x="1692" y="-1565"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="cHV-lc-6OE">

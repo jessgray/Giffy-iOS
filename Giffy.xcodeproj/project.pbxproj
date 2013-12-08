@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		1E12B6E718500D2700E0E3DA /* HomeCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E12B6E618500D2700E0E3DA /* HomeCollectionViewController.m */; };
 		1E6356701853FDC900F98A20 /* LibraryCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E63566F1853FDC900F98A20 /* LibraryCollectionViewController.m */; };
+		1E63567618540EBE00F98A20 /* ViewGifViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E63567518540EBE00F98A20 /* ViewGifViewController.m */; };
+		1E6356791854106600F98A20 /* UIImage+animatedGIF.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E6356781854106600F98A20 /* UIImage+animatedGIF.m */; };
+		1E63567B1854109600F98A20 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E63567A1854109600F98A20 /* ImageIO.framework */; };
 		1E74A5141851682A009F2BC2 /* HomeCollectionHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E74A5131851682A009F2BC2 /* HomeCollectionHeaderView.m */; };
 		1E74A51718525949009F2BC2 /* SelectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E74A51618525949009F2BC2 /* SelectionViewController.m */; };
 		1E94BC8F184FBCD800E7D456 /* TrendingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E94BC8E184FBCD800E7D456 /* TrendingViewController.m */; };
@@ -51,6 +54,11 @@
 		1E12B6E618500D2700E0E3DA /* HomeCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeCollectionViewController.m; sourceTree = "<group>"; };
 		1E63566E1853FDC900F98A20 /* LibraryCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LibraryCollectionViewController.h; sourceTree = "<group>"; };
 		1E63566F1853FDC900F98A20 /* LibraryCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LibraryCollectionViewController.m; sourceTree = "<group>"; };
+		1E63567418540EBE00F98A20 /* ViewGifViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewGifViewController.h; sourceTree = "<group>"; };
+		1E63567518540EBE00F98A20 /* ViewGifViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewGifViewController.m; sourceTree = "<group>"; };
+		1E6356771854106600F98A20 /* UIImage+animatedGIF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+animatedGIF.h"; sourceTree = "<group>"; };
+		1E6356781854106600F98A20 /* UIImage+animatedGIF.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+animatedGIF.m"; sourceTree = "<group>"; };
+		1E63567A1854109600F98A20 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
 		1E74A5121851682A009F2BC2 /* HomeCollectionHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeCollectionHeaderView.h; sourceTree = "<group>"; };
 		1E74A5131851682A009F2BC2 /* HomeCollectionHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeCollectionHeaderView.m; sourceTree = "<group>"; };
 		1E74A51518525949009F2BC2 /* SelectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectionViewController.h; sourceTree = "<group>"; };
@@ -98,6 +106,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1E63567B1854109600F98A20 /* ImageIO.framework in Frameworks */,
 				1E94BC93184FC0A500E7D456 /* CoreFoundation.framework in Frameworks */,
 				1E94BC91184FC06E00E7D456 /* CoreData.framework in Frameworks */,
 				1EAB46051835AF840085629A /* CoreGraphics.framework in Frameworks */,
@@ -128,6 +137,8 @@
 				1E12B6E618500D2700E0E3DA /* HomeCollectionViewController.m */,
 				1E74A51518525949009F2BC2 /* SelectionViewController.h */,
 				1E74A51618525949009F2BC2 /* SelectionViewController.m */,
+				1E63567418540EBE00F98A20 /* ViewGifViewController.h */,
+				1E63567518540EBE00F98A20 /* ViewGifViewController.m */,
 			);
 			name = Home;
 			sourceTree = "<group>";
@@ -172,6 +183,7 @@
 		1EAB46011835AF840085629A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1E63567A1854109600F98A20 /* ImageIO.framework */,
 				1E94BC92184FC0A400E7D456 /* CoreFoundation.framework */,
 				1E94BC90184FC06E00E7D456 /* CoreData.framework */,
 				1EAB46021835AF840085629A /* Foundation.framework */,
@@ -248,6 +260,8 @@
 		1EE776C3183C0D7700FCCD5B /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				1E6356771854106600F98A20 /* UIImage+animatedGIF.h */,
+				1E6356781854106600F98A20 /* UIImage+animatedGIF.m */,
 				1E94BC94184FC10700E7D456 /* Gifs.xcdatamodeld */,
 				1E94BC9A184FC49000E7D456 /* DataManager.h */,
 				1E94BC9B184FC49000E7D456 /* DataManager.m */,
@@ -368,7 +382,9 @@
 				1E94BC99184FC38C00E7D456 /* Gif.m in Sources */,
 				1E94BCB0184FCBDF00E7D456 /* NewGifViewController.m in Sources */,
 				1EAB460F1835AF840085629A /* main.m in Sources */,
+				1E6356791854106600F98A20 /* UIImage+animatedGIF.m in Sources */,
 				1E74A5141851682A009F2BC2 /* HomeCollectionHeaderView.m in Sources */,
+				1E63567618540EBE00F98A20 /* ViewGifViewController.m in Sources */,
 				1E12B6E718500D2700E0E3DA /* HomeCollectionViewController.m in Sources */,
 				1E94BCA7184FC7A700E7D456 /* Gif+Tag.m in Sources */,
 				1EAB46131835AF840085629A /* JGSAppDelegate.m in Sources */,
