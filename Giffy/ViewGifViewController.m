@@ -10,6 +10,8 @@
 #import "UIImage+animatedGIF.h"
 
 
+#define kToolbarHeight 44.0
+
 @interface ViewGifViewController ()
 
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
@@ -37,15 +39,20 @@
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     
+    // Get gif and initialize image view with it
     UIImage *animatedGif = [UIImage animatedImageWithAnimatedGIFData:self.gifData];
     _imageView = [[UIImageView alloc] initWithImage:animatedGif];
-    [self.scrollView addSubview:self.imageView];
     
+    [self.scrollView addSubview:self.imageView];
     self.scrollView.contentSize = animatedGif.size;
     
-    self.scrollView.maximumZoomScale = self.scrollView.bounds.size.width/animatedGif.size.width;
+    // Allow scroll view to zoom
+    self.scrollView.maximumZoomScale = 2.0;
     self.scrollView.minimumZoomScale = self.scrollView.bounds.size.width/animatedGif.size.width;
+    self.scrollView.bounces = YES;
+    self.scrollView.bouncesZoom = NO;
     
+    // Set initial view bounds for image
     self.scrollView.delegate = self;
     [self.scrollView zoomToRect:self.imageView.bounds animated:NO];
 }
