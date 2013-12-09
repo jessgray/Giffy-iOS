@@ -130,6 +130,9 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
+                                <connections>
+                                    <segue destination="qSf-DI-x04" kind="push" identifier="ViewSectionSegue" id="y9q-Hw-Xw0"/>
+                                </connections>
                             </collectionViewCell>
                         </cells>
                         <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="LibraryHeaderView" id="2aV-6r-fQp" customClass="HomeCollectionHeaderView">
@@ -158,7 +161,43 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="z41-u9-eLu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2236" y="-86"/>
+            <point key="canvasLocation" x="2233" y="112"/>
+        </scene>
+        <!--Library Category View Controller-->
+        <scene sceneID="YfK-5x-S1q">
+            <objects>
+                <collectionViewController autoresizesArchivedViewToFullSize="NO" id="qSf-DI-x04" customClass="LibraryCategoryViewController" sceneMemberID="viewController">
+                    <collectionView key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="prototypes" id="SmO-le-ehV">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Tu6-Zl-8w4">
+                            <size key="itemSize" width="50" height="50"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="LibraryCategoryCell" id="9DZ-vc-Ukj">
+                                <rect key="frame" x="0.0" y="64" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="qSf-DI-x04" id="Sr9-Hr-WDR"/>
+                            <outlet property="delegate" destination="qSf-DI-x04" id="0HW-lZ-uda"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" id="Xnk-U9-nnP"/>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="P6g-RC-2V7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2759" y="112"/>
         </scene>
         <!--New Gif View Controller - Add New Gif-->
         <scene sceneID="BZc-bT-dSO">
@@ -242,11 +281,11 @@
             </objects>
             <point key="canvasLocation" x="2773" y="-611"/>
         </scene>
-        <!--Navigation Controller - Home-->
+        <!--Navigation Controller - Recently Added-->
         <scene sceneID="mQ0-ap-3gN">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="UtA-zo-VuX" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Home" id="9O9-9R-tgg"/>
+                    <tabBarItem key="tabBarItem" title="Recently Added" image="Recents.png" id="9O9-9R-tgg"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="2i8-jD-LU9">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -287,7 +326,7 @@
         <scene sceneID="vdg-TF-xFc">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="1w2-xR-A6n" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Library" id="2fe-Vt-KnZ"/>
+                    <tabBarItem key="tabBarItem" title="Library" image="Bookmarks.png" id="2fe-Vt-KnZ"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="A4O-fT-uLk">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -321,13 +360,13 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h5w-Jo-WTy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2222" y="677"/>
+            <point key="canvasLocation" x="2225" y="801"/>
         </scene>
         <!--Navigation Controller - Trending-->
         <scene sceneID="KML-Vu-uXq">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Fw6-qP-M5j" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Trending" id="55g-pS-T08"/>
+                    <tabBarItem key="tabBarItem" title="Trending" image="Chart_Up.png" id="55g-pS-T08"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="Ms9-wq-i5G">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -344,6 +383,11 @@
             <point key="canvasLocation" x="1696" y="677"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Bookmarks.png" width="25" height="22"/>
+        <image name="Chart_Up.png" width="25" height="21"/>
+        <image name="Recents.png" width="24" height="24"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

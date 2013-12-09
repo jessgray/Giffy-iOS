@@ -11,6 +11,7 @@
 		1E505534185629CA00E7CBE4 /* Bookmarks@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1E505533185629CA00E7CBE4 /* Bookmarks@2x.png */; };
 		1E505536185629FF00E7CBE4 /* Chart_Up@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1E505535185629FF00E7CBE4 /* Chart_Up@2x.png */; };
 		1E50553818562A2700E7CBE4 /* Recents@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1E50553718562A2700E7CBE4 /* Recents@2x.png */; };
+		1E50553B18562FC100E7CBE4 /* LibraryCategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E50553A18562FC100E7CBE4 /* LibraryCategoryViewController.m */; };
 		1E6356701853FDC900F98A20 /* LibraryCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E63566F1853FDC900F98A20 /* LibraryCollectionViewController.m */; };
 		1E63567618540EBE00F98A20 /* ViewGifViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E63567518540EBE00F98A20 /* ViewGifViewController.m */; };
 		1E6356791854106600F98A20 /* UIImage+animatedGIF.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E6356781854106600F98A20 /* UIImage+animatedGIF.m */; };
@@ -58,6 +59,8 @@
 		1E505533185629CA00E7CBE4 /* Bookmarks@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Bookmarks@2x.png"; sourceTree = "<group>"; };
 		1E505535185629FF00E7CBE4 /* Chart_Up@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Chart_Up@2x.png"; sourceTree = "<group>"; };
 		1E50553718562A2700E7CBE4 /* Recents@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Recents@2x.png"; sourceTree = "<group>"; };
+		1E50553918562FC100E7CBE4 /* LibraryCategoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LibraryCategoryViewController.h; sourceTree = "<group>"; };
+		1E50553A18562FC100E7CBE4 /* LibraryCategoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LibraryCategoryViewController.m; sourceTree = "<group>"; };
 		1E63566E1853FDC900F98A20 /* LibraryCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LibraryCollectionViewController.h; sourceTree = "<group>"; };
 		1E63566F1853FDC900F98A20 /* LibraryCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LibraryCollectionViewController.m; sourceTree = "<group>"; };
 		1E63567418540EBE00F98A20 /* ViewGifViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewGifViewController.h; sourceTree = "<group>"; };
@@ -154,6 +157,8 @@
 			children = (
 				1E63566E1853FDC900F98A20 /* LibraryCollectionViewController.h */,
 				1E63566F1853FDC900F98A20 /* LibraryCollectionViewController.m */,
+				1E50553918562FC100E7CBE4 /* LibraryCategoryViewController.h */,
+				1E50553A18562FC100E7CBE4 /* LibraryCategoryViewController.m */,
 			);
 			name = Library;
 			sourceTree = "<group>";
@@ -392,6 +397,7 @@
 				1E94BCA4184FC4B200E7D456 /* MyDataManager.m in Sources */,
 				1E94BC8F184FBCD800E7D456 /* TrendingViewController.m in Sources */,
 				1E94BC99184FC38C00E7D456 /* Gif.m in Sources */,
+				1E50553B18562FC100E7CBE4 /* LibraryCategoryViewController.m in Sources */,
 				1E94BCB0184FCBDF00E7D456 /* NewGifViewController.m in Sources */,
 				1EAB460F1835AF840085629A /* main.m in Sources */,
 				1E6356791854106600F98A20 /* UIImage+animatedGIF.m in Sources */,

@@ -1,31 +1,31 @@
 //
-//  LibraryCollectionViewController.m
+//  LibraryCategoryViewController.m
 //  Giffy
 //
-//  Created by Jessica Smith on 12/7/13.
+//  Created by Jessica Smith on 12/9/13.
 //  Copyright (c) 2013 Jessica Smith. All rights reserved.
 //
 
-#import "LibraryCollectionViewController.h"
+#import "LibraryCategoryViewController.h"
 #import "DataSource.h"
 #import "MyDataManager.h"
 #import "DataManager.h"
 #import "Gif.h"
-#import "LibraryCategoryViewController.h"
 
-@interface LibraryCollectionViewController ()
+@interface LibraryCategoryViewController ()
 
 @property (nonatomic, strong) DataSource *dataSource;
 @property (nonatomic, strong) MyDataManager *myDataManager;
 
 @end
 
-@implementation LibraryCollectionViewController
+@implementation LibraryCategoryViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
+        // Custom initialization
     }
     return self;
 }
@@ -49,6 +49,9 @@
     self.collectionView.dataSource = self.dataSource;
     self.dataSource.collectionView = self.collectionView;
     
+    // Set title of Navigation controller
+    self.navigationItem.title = self.sectionName;
+    
     UICollectionViewFlowLayout *collectionViewLayout = (UICollectionViewFlowLayout *)self.collectionView.collectionViewLayout;
     collectionViewLayout.sectionInset = UIEdgeInsetsMake(10, 10, 20, 10);
     
@@ -56,6 +59,11 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
+    
+    
+    NSString *searchPredicateString = [NSString stringWithFormat:@"tag contains '%@'", self.sectionName];
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:searchPredicateString];
+    [self.dataSource updateWithPredicate:predicate];
     
     [self.collectionView reloadData];
 }
@@ -68,12 +76,13 @@
 
 #pragma mark - Collection View Data Source
 - (NSString *)cellIdentifierForObject:(id)object {
-    return @"LibraryCell";
+    return @"LibraryCategoryCell";
 }
 
 - (NSString *)headerIdentifierForObject:(id)object {
-    return @"LibraryHeaderView";
+    return nil;
 }
+
 
 - (void)configureCell:(UICollectionViewCell*)cell withObject:(id)object {
     Gif *gif = object;
@@ -89,21 +98,5 @@
     
     [cell.contentView addSubview:imageView];
 }
-
-#pragma mark - Segues
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    
-    if([segue.identifier isEqualToString:@"ViewSectionSegue"]) {
-        LibraryCategoryViewController *viewController = segue.destinationViewController;
-    
-        // Use dataSource tableview since it will always be the current one
-        NSIndexPath *indexPath = [self.dataSource.collectionView indexPathsForSelectedItems][0];
-    
-        Gif *gif = [self.dataSource objectAtIndexPath:indexPath];
-        viewController.sectionName = gif.tag;
-    }
-}
-
-
 
 @end
