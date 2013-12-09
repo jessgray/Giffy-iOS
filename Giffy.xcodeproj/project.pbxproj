@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		1E12B6E718500D2700E0E3DA /* HomeCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E12B6E618500D2700E0E3DA /* HomeCollectionViewController.m */; };
+		1E505534185629CA00E7CBE4 /* Bookmarks@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1E505533185629CA00E7CBE4 /* Bookmarks@2x.png */; };
+		1E505536185629FF00E7CBE4 /* Chart_Up@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1E505535185629FF00E7CBE4 /* Chart_Up@2x.png */; };
+		1E50553818562A2700E7CBE4 /* Recents@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1E50553718562A2700E7CBE4 /* Recents@2x.png */; };
 		1E6356701853FDC900F98A20 /* LibraryCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E63566F1853FDC900F98A20 /* LibraryCollectionViewController.m */; };
 		1E63567618540EBE00F98A20 /* ViewGifViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E63567518540EBE00F98A20 /* ViewGifViewController.m */; };
 		1E6356791854106600F98A20 /* UIImage+animatedGIF.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E6356781854106600F98A20 /* UIImage+animatedGIF.m */; };
@@ -52,6 +55,9 @@
 /* Begin PBXFileReference section */
 		1E12B6E518500D2700E0E3DA /* HomeCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeCollectionViewController.h; sourceTree = "<group>"; };
 		1E12B6E618500D2700E0E3DA /* HomeCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeCollectionViewController.m; sourceTree = "<group>"; };
+		1E505533185629CA00E7CBE4 /* Bookmarks@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Bookmarks@2x.png"; sourceTree = "<group>"; };
+		1E505535185629FF00E7CBE4 /* Chart_Up@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Chart_Up@2x.png"; sourceTree = "<group>"; };
+		1E50553718562A2700E7CBE4 /* Recents@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Recents@2x.png"; sourceTree = "<group>"; };
 		1E63566E1853FDC900F98A20 /* LibraryCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LibraryCollectionViewController.h; sourceTree = "<group>"; };
 		1E63566F1853FDC900F98A20 /* LibraryCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LibraryCollectionViewController.m; sourceTree = "<group>"; };
 		1E63567418540EBE00F98A20 /* ViewGifViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewGifViewController.h; sourceTree = "<group>"; };
@@ -197,6 +203,9 @@
 		1EAB46081835AF840085629A /* Giffy */ = {
 			isa = PBXGroup;
 			children = (
+				1E50553718562A2700E7CBE4 /* Recents@2x.png */,
+				1E505535185629FF00E7CBE4 /* Chart_Up@2x.png */,
+				1E505533185629CA00E7CBE4 /* Bookmarks@2x.png */,
 				1EE776C1183C0D6C00FCCD5B /* View */,
 				1EE776C2183C0D7200FCCD5B /* Controllers */,
 				1EE776C3183C0D7700FCCD5B /* Models */,
@@ -358,7 +367,10 @@
 			files = (
 				1EAB461B1835AF840085629A /* Images.xcassets in Resources */,
 				1EAB460D1835AF840085629A /* InfoPlist.strings in Resources */,
+				1E505534185629CA00E7CBE4 /* Bookmarks@2x.png in Resources */,
 				1EAB46161835AF840085629A /* Main.storyboard in Resources */,
+				1E505536185629FF00E7CBE4 /* Chart_Up@2x.png in Resources */,
+				1E50553818562A2700E7CBE4 /* Recents@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -523,6 +535,7 @@
 				GCC_PREFIX_HEADER = "Giffy/Giffy-Prefix.pch";
 				INFOPLIST_FILE = "Giffy/Giffy-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "DECF4B97-590A-43E6-821D-625D6D9B7291";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -536,6 +549,7 @@
 				GCC_PREFIX_HEADER = "Giffy/Giffy-Prefix.pch";
 				INFOPLIST_FILE = "Giffy/Giffy-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "DECF4B97-590A-43E6-821D-625D6D9B7291";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
