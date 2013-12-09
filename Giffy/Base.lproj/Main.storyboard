@@ -186,6 +186,9 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
+                                <connections>
+                                    <segue destination="UJ1-XW-sXa" kind="push" identifier="ViewCategoryGifSegue" id="kJn-A9-vU0"/>
+                                </connections>
                             </collectionViewCell>
                         </cells>
                         <connections>
@@ -279,7 +282,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ICo-cw-WV6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2773" y="-611"/>
+            <point key="canvasLocation" x="2773" y="-589"/>
         </scene>
         <!--Navigation Controller - Recently Added-->
         <scene sceneID="mQ0-ap-3gN">
@@ -393,4 +396,7 @@
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="kJn-A9-vU0"/>
+    </inferredMetricsTieBreakers>
 </document>

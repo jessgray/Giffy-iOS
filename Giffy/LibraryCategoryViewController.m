@@ -11,6 +11,7 @@
 #import "MyDataManager.h"
 #import "DataManager.h"
 #import "Gif.h"
+#import "ViewGifViewController.h"
 
 @interface LibraryCategoryViewController ()
 
@@ -97,6 +98,19 @@
     imageView.contentMode = UIViewContentModeScaleAspectFill;
     
     [cell.contentView addSubview:imageView];
+}
+
+#pragma mark - Segues
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if([segue.identifier isEqualToString:@"ViewCategoryGifSegue"]) {
+        ViewGifViewController *viewController = segue.destinationViewController;
+        
+        // Use dataSource tableview since it will always be the current one
+        NSIndexPath *indexPath = [self.dataSource.collectionView indexPathsForSelectedItems][0];
+        
+        Gif *gif = [self.dataSource objectAtIndexPath:indexPath];
+        viewController.gifData = gif.photo;
+    }
 }
 
 @end
