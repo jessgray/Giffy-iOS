@@ -22,7 +22,5 @@
 // provide the header identifier for the given managed object
 -(NSString *)headerIdentifierForObject:(id)object;
 
-/* Get the title for headers
--(UICollectionReusableView *)headerViewForSectionName:(NSString *)name withKind:(NSString *)kind forCollectionView:(UICollectionView *)collectionView atIndexPath:(NSIndexPath *)indexPath;*/
 
 @end

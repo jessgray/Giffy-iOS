@@ -12,6 +12,7 @@
 #import "DataManager.h"
 #import "Gif.h"
 #import "LibraryCategoryViewController.h"
+#import "HomeCollectionHeaderView.h"
 
 @interface LibraryCollectionViewController ()
 
@@ -51,6 +52,7 @@
     
     UICollectionViewFlowLayout *collectionViewLayout = (UICollectionViewFlowLayout *)self.collectionView.collectionViewLayout;
     collectionViewLayout.sectionInset = UIEdgeInsetsMake(10, 10, 20, 10);
+    collectionViewLayout.minimumInteritemSpacing = 0;
     
 }
 
@@ -88,6 +90,8 @@
     imageView.contentMode = UIViewContentModeScaleAspectFill;
     
     [cell.contentView addSubview:imageView];
+    
+    
 }
 
 #pragma mark - Segues

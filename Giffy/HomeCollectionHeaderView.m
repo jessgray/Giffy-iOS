@@ -7,6 +7,7 @@
 //
 
 #import "HomeCollectionHeaderView.h"
+#import "LibraryCategoryViewController.h"
 
 @interface HomeCollectionHeaderView ()
 

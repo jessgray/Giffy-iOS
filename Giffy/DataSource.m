@@ -60,7 +60,9 @@ dataManagerDelegate:(id<DataManagerDelegate>)dataManagerDelegate {
         self.fetchRequest.predicate = predicate;
         
         //cache name
-        NSString *cacheName = [NSString stringWithFormat:@"%@.cache", [dataManagerDelegate xcDataModelName]];
+        //NSString *cacheName = [NSString stringWithFormat:@"%@.cache", [dataManagerDelegate xcDataModelName]];
+        
+        NSString *cacheName = nil;
         
         // create the Fetched Results Controller
         NSManagedObjectContext *context = [dataManager managedObjectContext];
