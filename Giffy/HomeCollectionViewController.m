@@ -122,9 +122,14 @@
         
         UICollectionViewCell *cell = (UICollectionViewCell *)[collectionView cellForItemAtIndexPath:indexPath];
 
+        NSString *path = [[NSBundle mainBundle] pathForResource:@"SelectionCheckMark" ofType:@"png"];
+        UIImage *image = [[UIImage alloc] initWithContentsOfFile:path];
+        
         // Add overlay to show the selection happening
-        UIImageView *overlayView = [[UIImageView alloc] init];
+        UIImageView *overlayView = [[UIImageView alloc] initWithImage:image];
         overlayView.frame = CGRectMake(overlayView.frame.origin.x, overlayView.frame.origin.y, cell.contentView.frame.size.width, cell.contentView.frame.size.height);
+        
+        overlayView.contentMode = UIViewContentModeScaleAspectFill;
         
         overlayView.backgroundColor = [[UIColor alloc]initWithWhite:1.0 alpha:0.5];
         [cell.contentView addSubview:overlayView];
