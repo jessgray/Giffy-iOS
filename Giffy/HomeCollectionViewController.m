@@ -17,7 +17,11 @@
 @interface HomeCollectionViewController ()
 - (IBAction)selectButtonClicked:(id)sender;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *selectButton;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *addRemoveButton;
+- (IBAction)addRemoveButtonClicked:(id)sender;
 
+
+@property (nonatomic, strong) UIBarButtonItem *addButton;
 @property (nonatomic, strong) DataSource *dataSource;
 @property (nonatomic, strong) MyDataManager *myDataManager;
 @property BOOL multipleSelectionsAllowed;
@@ -169,6 +173,13 @@
         
         self.navigationItem.title = @"Select";
         self.selectButton.title = @"Cancel";
+        
+        // Save add button and add delete button in its place
+        self.addButton = self.addRemoveButton;
+        UIBarButtonItem *deleteButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemTrash target:self action:@selector(deleteSelectedCells)];
+        
+        self.navigationItem.rightBarButtonItem = deleteButton;
+
     } else {
         
         // Remove any selected items
@@ -187,6 +198,32 @@
         
         self.navigationItem.title = @"Giffy";
         self.selectButton.title = @"Select";
+        
+        // Retrieve the add button and replace the delete button
+        self.addRemoveButton = self.addButton;
+        self.navigationItem.rightBarButtonItem = self.addRemoveButton;
     }
+}
+
+- (void)deleteSelectedCells {
+    if(self.multipleSelectionsAllowed) {
+        
+        // Delete Selected Items
+        for (NSIndexPath *indexPath in [self.collectionView indexPathsForSelectedItems]) {
+            [self.dataSource deleteRowAtIndexPath:indexPath];
+        }
+        
+        [self.collectionView reloadData];
+    }
+}
+
+- (IBAction)addRemoveButtonClicked:(id)sender {
+    
+    if(self.multipleSelectionsAllowed) {
+        
+        // Delete Selected Items
+        [self.collectionView deleteItemsAtIndexPaths:[self.collectionView indexPathsForSelectedItems]];
+    }
+    
 }
 @end

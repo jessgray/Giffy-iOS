@@ -63,11 +63,13 @@
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="URb-5y-ffL">
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
+                                <action selector="addRemoveButtonClicked:" destination="EF9-EA-QhM" id="upz-Fb-Oh4"/>
                                 <segue destination="96t-fM-FNa" kind="push" identifier="NewGifSegue" id="XeT-ZZ-YpI"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="addRemoveButton" destination="URb-5y-ffL" id="sMG-fr-r5M"/>
                         <outlet property="selectButton" destination="Uxw-sH-FBN" id="kuL-hQ-OYw"/>
                     </connections>
                 </collectionViewController>
