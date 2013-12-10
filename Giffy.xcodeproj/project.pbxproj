@@ -17,7 +17,6 @@
 		1E6356791854106600F98A20 /* UIImage+animatedGIF.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E6356781854106600F98A20 /* UIImage+animatedGIF.m */; };
 		1E63567B1854109600F98A20 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E63567A1854109600F98A20 /* ImageIO.framework */; };
 		1E74A5141851682A009F2BC2 /* HomeCollectionHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E74A5131851682A009F2BC2 /* HomeCollectionHeaderView.m */; };
-		1E74A51718525949009F2BC2 /* SelectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E74A51618525949009F2BC2 /* SelectionViewController.m */; };
 		1E94BC8F184FBCD800E7D456 /* TrendingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E94BC8E184FBCD800E7D456 /* TrendingViewController.m */; };
 		1E94BC91184FC06E00E7D456 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E94BC90184FC06E00E7D456 /* CoreData.framework */; };
 		1E94BC93184FC0A500E7D456 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E94BC92184FC0A400E7D456 /* CoreFoundation.framework */; };
@@ -70,8 +69,6 @@
 		1E63567A1854109600F98A20 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
 		1E74A5121851682A009F2BC2 /* HomeCollectionHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeCollectionHeaderView.h; sourceTree = "<group>"; };
 		1E74A5131851682A009F2BC2 /* HomeCollectionHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeCollectionHeaderView.m; sourceTree = "<group>"; };
-		1E74A51518525949009F2BC2 /* SelectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectionViewController.h; sourceTree = "<group>"; };
-		1E74A51618525949009F2BC2 /* SelectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectionViewController.m; sourceTree = "<group>"; };
 		1E94BC8D184FBCD800E7D456 /* TrendingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrendingViewController.h; sourceTree = "<group>"; };
 		1E94BC8E184FBCD800E7D456 /* TrendingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrendingViewController.m; sourceTree = "<group>"; };
 		1E94BC90184FC06E00E7D456 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
@@ -144,10 +141,6 @@
 				1E94BCAF184FCBDF00E7D456 /* NewGifViewController.m */,
 				1E12B6E518500D2700E0E3DA /* HomeCollectionViewController.h */,
 				1E12B6E618500D2700E0E3DA /* HomeCollectionViewController.m */,
-				1E74A51518525949009F2BC2 /* SelectionViewController.h */,
-				1E74A51618525949009F2BC2 /* SelectionViewController.m */,
-				1E63567418540EBE00F98A20 /* ViewGifViewController.h */,
-				1E63567518540EBE00F98A20 /* ViewGifViewController.m */,
 			);
 			name = Home;
 			sourceTree = "<group>";
@@ -264,6 +257,8 @@
 			children = (
 				1E74A5121851682A009F2BC2 /* HomeCollectionHeaderView.h */,
 				1E74A5131851682A009F2BC2 /* HomeCollectionHeaderView.m */,
+				1E63567418540EBE00F98A20 /* ViewGifViewController.h */,
+				1E63567518540EBE00F98A20 /* ViewGifViewController.m */,
 				1E94BCAC184FCB3800E7D456 /* Library */,
 				1E94BCAB184FCB3000E7D456 /* Home */,
 				1E94BCAD184FCB3D00E7D456 /* Trending Gifs */,
@@ -410,7 +405,6 @@
 				1E94BC96184FC10700E7D456 /* Gifs.xcdatamodeld in Sources */,
 				1E94BCA1184FC49000E7D456 /* DataSource.m in Sources */,
 				1E6356701853FDC900F98A20 /* LibraryCollectionViewController.m in Sources */,
-				1E74A51718525949009F2BC2 /* SelectionViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

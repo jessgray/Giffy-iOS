@@ -147,7 +147,6 @@ dataManagerDelegate:(id<DataManagerDelegate>)dataManagerDelegate {
     return [sectionInfo numberOfObjects];
 }
 
-
 // Customize the appearance of collection view cells
 
 // The cell that is returned must be retrieved from a call to -dequeueReusableCellWithReuseIdentifier:forIndexPath:

@@ -15,9 +15,11 @@
 #import "ViewGifViewController.h"
 
 @interface HomeCollectionViewController ()
+- (IBAction)selectButtonClicked:(id)sender;
 
 @property (nonatomic, strong) DataSource *dataSource;
 @property (nonatomic, strong) MyDataManager *myDataManager;
+@property BOOL multipleSelectionsAllowed;
 
 @end
 
@@ -46,6 +48,8 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    
+    self.multipleSelectionsAllowed = NO;
     
     self.collectionView.dataSource = self.dataSource;
     self.dataSource.collectionView = self.collectionView;
@@ -77,6 +81,7 @@
 }
 
 - (void)configureCell:(UICollectionViewCell*)cell withObject:(id)object {
+    
     Gif *gif = object;
     
     UIImage *image = [[UIImage alloc] initWithData:gif.photo];
@@ -89,6 +94,43 @@
     imageView.contentMode = UIViewContentModeScaleAspectFill;
     
     [cell.contentView addSubview:imageView];
+}
+
+- (BOOL)shouldPerformSegueWithIdentifier:(NSString *)identifier sender:(id)sender {
+    if(self.multipleSelectionsAllowed) {
+        return NO;
+    } else {
+        return YES;
+    }
+}
+
+
+
+- (void)collectionView:(UICollectionView *)collectionView didDeselectItemAtIndexPath:(NSIndexPath *)indexPath {
+    if(self.multipleSelectionsAllowed) {
+        
+        UICollectionViewCell *cell = (UICollectionViewCell *)[collectionView cellForItemAtIndexPath:indexPath];
+        
+        UIView *overlayView = cell.contentView.subviews.lastObject;
+        
+        [overlayView removeFromSuperview];
+        
+    }
+}
+
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    if(self.multipleSelectionsAllowed) {
+        
+        UICollectionViewCell *cell = (UICollectionViewCell *)[collectionView cellForItemAtIndexPath:indexPath];
+        
+        // Add overlay to show the selection happening
+        UIImageView *overlayView = [[UIImageView alloc] init];
+        overlayView.frame = CGRectMake(overlayView.frame.origin.x, overlayView.frame.origin.y, cell.contentView.frame.size.width, cell.contentView.frame.size.height);
+        
+        overlayView.backgroundColor = [[UIColor alloc]initWithWhite:1.0 alpha:0.5];
+        [cell.contentView addSubview:overlayView];
+        
+    }
 }
 
 #pragma mark - Segues
@@ -114,4 +156,12 @@
     }
 }
 
+- (IBAction)selectButtonClicked:(id)sender {
+    
+    // Allow multiple selection
+    self.collectionView.allowsMultipleSelection = YES;
+    self.multipleSelectionsAllowed = YES;
+    
+    self.navigationItem.title = @"Select";
+}
 @end
