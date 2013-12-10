@@ -54,6 +54,8 @@
     collectionViewLayout.sectionInset = UIEdgeInsetsMake(10, 10, 20, 10);
     collectionViewLayout.minimumInteritemSpacing = 0;
     
+    [self.collectionView reloadData];
+    
 }
 
 - (void)viewWillAppear:(BOOL)animated {
