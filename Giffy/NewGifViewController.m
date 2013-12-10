@@ -75,6 +75,12 @@
         
         NSDictionary *dictionary = @{@"tag":self.tagTextField.text, @"date":dateOnly, @"url":self.linkTextField.text};
         self.completionBlock(dictionary);
+        
+        UIAlertView *message = [[UIAlertView alloc] initWithTitle:nil message:@"Your gif was added!" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        [message show];
+        
+        self.tagTextField.text = @"";
+        self.linkTextField.text = @"";
     }
 }
 

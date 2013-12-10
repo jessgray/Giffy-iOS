@@ -176,7 +176,7 @@
         
         // Save add button and add delete button in its place
         self.addButton = self.addRemoveButton;
-        UIBarButtonItem *deleteButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemTrash target:self action:@selector(deleteSelectedCells)];
+        UIBarButtonItem *deleteButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemTrash target:self action:@selector(showDeleteActionSheet)];
         
         self.navigationItem.rightBarButtonItem = deleteButton;
 
@@ -203,6 +203,21 @@
         self.addRemoveButton = self.addButton;
         self.navigationItem.rightBarButtonItem = self.addRemoveButton;
     }
+}
+
+- (void)showDeleteActionSheet {
+    NSUInteger count = [[self.collectionView indexPathsForSelectedItems] count];
+    
+    UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:nil delegate:self cancelButtonTitle:@"Cancel" destructiveButtonTitle:[NSString stringWithFormat:@"Delete %lu gifs", (unsigned long)count] otherButtonTitles: nil];
+    [actionSheet showFromTabBar:self.tabBarController.tabBar];
+}
+
+- (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex {
+    // Delete selected cells if delete button was tapped
+    if(buttonIndex == 0) {
+        [self deleteSelectedCells];
+    }
+
 }
 
 - (void)deleteSelectedCells {
