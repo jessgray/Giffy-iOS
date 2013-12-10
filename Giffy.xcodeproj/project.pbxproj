@@ -16,6 +16,7 @@
 		1E63567618540EBE00F98A20 /* ViewGifViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E63567518540EBE00F98A20 /* ViewGifViewController.m */; };
 		1E6356791854106600F98A20 /* UIImage+animatedGIF.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E6356781854106600F98A20 /* UIImage+animatedGIF.m */; };
 		1E63567B1854109600F98A20 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E63567A1854109600F98A20 /* ImageIO.framework */; };
+		1E6D818A1856E6B300BE5C88 /* SelectionMark.png in Resources */ = {isa = PBXBuildFile; fileRef = 1E6D81891856E6B300BE5C88 /* SelectionMark.png */; };
 		1E74A5141851682A009F2BC2 /* HomeCollectionHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E74A5131851682A009F2BC2 /* HomeCollectionHeaderView.m */; };
 		1E94BC8F184FBCD800E7D456 /* TrendingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E94BC8E184FBCD800E7D456 /* TrendingViewController.m */; };
 		1E94BC91184FC06E00E7D456 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E94BC90184FC06E00E7D456 /* CoreData.framework */; };
@@ -40,7 +41,6 @@
 		1EAB46241835AF840085629A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EAB46061835AF840085629A /* UIKit.framework */; };
 		1EAB462C1835AF840085629A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1EAB462A1835AF840085629A /* InfoPlist.strings */; };
 		1EAB462E1835AF840085629A /* GiffyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EAB462D1835AF840085629A /* GiffyTests.m */; };
-		1EE58C741856DBDD00A0BE5E /* SelectionCheckMark.png in Resources */ = {isa = PBXBuildFile; fileRef = 1EE58C731856DBDD00A0BE5E /* SelectionCheckMark.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +68,7 @@
 		1E6356771854106600F98A20 /* UIImage+animatedGIF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+animatedGIF.h"; sourceTree = "<group>"; };
 		1E6356781854106600F98A20 /* UIImage+animatedGIF.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+animatedGIF.m"; sourceTree = "<group>"; };
 		1E63567A1854109600F98A20 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
+		1E6D81891856E6B300BE5C88 /* SelectionMark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SelectionMark.png; sourceTree = "<group>"; };
 		1E74A5121851682A009F2BC2 /* HomeCollectionHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeCollectionHeaderView.h; sourceTree = "<group>"; };
 		1E74A5131851682A009F2BC2 /* HomeCollectionHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeCollectionHeaderView.m; sourceTree = "<group>"; };
 		1E94BC8D184FBCD800E7D456 /* TrendingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrendingViewController.h; sourceTree = "<group>"; };
@@ -106,7 +107,6 @@
 		1EAB46291835AF840085629A /* GiffyTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GiffyTests-Info.plist"; sourceTree = "<group>"; };
 		1EAB462B1835AF840085629A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1EAB462D1835AF840085629A /* GiffyTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GiffyTests.m; sourceTree = "<group>"; };
-		1EE58C731856DBDD00A0BE5E /* SelectionCheckMark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SelectionCheckMark.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -206,7 +206,7 @@
 				1E50553718562A2700E7CBE4 /* Recents@2x.png */,
 				1E505535185629FF00E7CBE4 /* Chart_Up@2x.png */,
 				1E505533185629CA00E7CBE4 /* Bookmarks@2x.png */,
-				1EE58C731856DBDD00A0BE5E /* SelectionCheckMark.png */,
+				1E6D81891856E6B300BE5C88 /* SelectionMark.png */,
 				1EE776C1183C0D6C00FCCD5B /* View */,
 				1EE776C2183C0D7200FCCD5B /* Controllers */,
 				1EE776C3183C0D7700FCCD5B /* Models */,
@@ -368,8 +368,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1EE58C741856DBDD00A0BE5E /* SelectionCheckMark.png in Resources */,
 				1EAB461B1835AF840085629A /* Images.xcassets in Resources */,
+				1E6D818A1856E6B300BE5C88 /* SelectionMark.png in Resources */,
 				1EAB460D1835AF840085629A /* InfoPlist.strings in Resources */,
 				1E505534185629CA00E7CBE4 /* Bookmarks@2x.png in Resources */,
 				1EAB46161835AF840085629A /* Main.storyboard in Resources */,
