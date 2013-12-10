@@ -16,6 +16,7 @@
 
 @interface HomeCollectionViewController ()
 - (IBAction)selectButtonClicked:(id)sender;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *selectButton;
 
 @property (nonatomic, strong) DataSource *dataSource;
 @property (nonatomic, strong) MyDataManager *myDataManager;
@@ -110,9 +111,7 @@
     if(self.multipleSelectionsAllowed) {
         
         UICollectionViewCell *cell = (UICollectionViewCell *)[collectionView cellForItemAtIndexPath:indexPath];
-        
         UIView *overlayView = cell.contentView.subviews.lastObject;
-        
         [overlayView removeFromSuperview];
         
     }
@@ -122,7 +121,7 @@
     if(self.multipleSelectionsAllowed) {
         
         UICollectionViewCell *cell = (UICollectionViewCell *)[collectionView cellForItemAtIndexPath:indexPath];
-        
+
         // Add overlay to show the selection happening
         UIImageView *overlayView = [[UIImageView alloc] init];
         overlayView.frame = CGRectMake(overlayView.frame.origin.x, overlayView.frame.origin.y, cell.contentView.frame.size.width, cell.contentView.frame.size.height);
@@ -158,10 +157,31 @@
 
 - (IBAction)selectButtonClicked:(id)sender {
     
-    // Allow multiple selection
-    self.collectionView.allowsMultipleSelection = YES;
-    self.multipleSelectionsAllowed = YES;
-    
-    self.navigationItem.title = @"Select";
+    if(!self.multipleSelectionsAllowed) {
+        // Allow multiple selection
+        self.collectionView.allowsMultipleSelection = YES;
+        self.multipleSelectionsAllowed = YES;
+        
+        self.navigationItem.title = @"Select";
+        self.selectButton.title = @"Cancel";
+    } else {
+        
+        // Remove any selected items
+        for (NSIndexPath *indexPath in [self.collectionView indexPathsForSelectedItems]) {
+            UICollectionViewCell *cell = (UICollectionViewCell *)[self.collectionView cellForItemAtIndexPath:indexPath];
+            UIView *overlayView = cell.contentView.subviews.lastObject;
+            
+            [overlayView removeFromSuperview];
+            
+            [self.collectionView deselectItemAtIndexPath:indexPath animated:NO];
+        }
+        
+        // Disallow multiple selection and change titles
+        self.collectionView.allowsMultipleSelection = NO;
+        self.multipleSelectionsAllowed = NO;
+        
+        self.navigationItem.title = @"Giffy";
+        self.selectButton.title = @"Select";
+    }
 }
 @end
