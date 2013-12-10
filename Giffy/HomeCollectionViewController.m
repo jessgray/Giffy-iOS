@@ -18,7 +18,6 @@
 - (IBAction)selectButtonClicked:(id)sender;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *selectButton;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *addRemoveButton;
-- (IBAction)addRemoveButtonClicked:(id)sender;
 
 
 @property (nonatomic, strong) UIBarButtonItem *addButton;
@@ -114,6 +113,11 @@
 - (void)collectionView:(UICollectionView *)collectionView didDeselectItemAtIndexPath:(NSIndexPath *)indexPath {
     if(self.multipleSelectionsAllowed) {
         
+        // Disable delete button if nothing is selected
+        if([[self.collectionView indexPathsForSelectedItems] count] == 0) {
+            self.navigationItem.rightBarButtonItem.enabled = NO;
+        }
+        
         UICollectionViewCell *cell = (UICollectionViewCell *)[collectionView cellForItemAtIndexPath:indexPath];
         UIView *overlayView = cell.contentView.subviews.lastObject;
         [overlayView removeFromSuperview];
@@ -123,6 +127,9 @@
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     if(self.multipleSelectionsAllowed) {
+        
+        // Enable deletions
+        self.navigationItem.rightBarButtonItem.enabled = YES;
         
         UICollectionViewCell *cell = (UICollectionViewCell *)[collectionView cellForItemAtIndexPath:indexPath];
 
@@ -178,7 +185,9 @@
         self.addButton = self.addRemoveButton;
         UIBarButtonItem *deleteButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemTrash target:self action:@selector(showDeleteActionSheet)];
         
+        // Disable delete button until selections have been made
         self.navigationItem.rightBarButtonItem = deleteButton;
+        self.navigationItem.rightBarButtonItem.enabled = NO;
 
     } else {
         
@@ -217,7 +226,6 @@
     if(buttonIndex == 0) {
         [self deleteSelectedCells];
     }
-
 }
 
 - (void)deleteSelectedCells {
@@ -229,16 +237,28 @@
         }
         
         [self.collectionView reloadData];
+        
+        // Remove any selected items
+        for (NSIndexPath *indexPath in [self.collectionView indexPathsForSelectedItems]) {
+            UICollectionViewCell *cell = (UICollectionViewCell *)[self.collectionView cellForItemAtIndexPath:indexPath];
+            UIView *overlayView = cell.contentView.subviews.lastObject;
+            
+            [overlayView removeFromSuperview];
+            
+            [self.collectionView deselectItemAtIndexPath:indexPath animated:NO];
+        }
+        
+        // Disallow multiple selection and change titles
+        self.collectionView.allowsMultipleSelection = NO;
+        self.multipleSelectionsAllowed = NO;
+        
+        self.navigationItem.title = @"Giffy";
+        self.selectButton.title = @"Select";
+        
+        // Retrieve the add button and replace the delete button
+        self.addRemoveButton = self.addButton;
+        self.navigationItem.rightBarButtonItem = self.addRemoveButton;
     }
 }
 
-- (IBAction)addRemoveButtonClicked:(id)sender {
-    
-    if(self.multipleSelectionsAllowed) {
-        
-        // Delete Selected Items
-        [self.collectionView deleteItemsAtIndexPaths:[self.collectionView indexPathsForSelectedItems]];
-    }
-    
-}
 @end
