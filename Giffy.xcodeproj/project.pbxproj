@@ -189,6 +189,8 @@
 		1E9974A21857B0F9002F73C0 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				1E6356771854106600F98A20 /* UIImage+animatedGIF.h */,
+				1E6356781854106600F98A20 /* UIImage+animatedGIF.m */,
 				1E94BC9A184FC49000E7D456 /* DataManager.h */,
 				1E94BC9B184FC49000E7D456 /* DataManager.m */,
 				1E94BC9C184FC49000E7D456 /* DataManagerDelegate.h */,
@@ -197,6 +199,15 @@
 				1E94BC9F184FC49000E7D456 /* DataSourceCellConfigurer.h */,
 			);
 			name = Data;
+			sourceTree = "<group>";
+		};
+		1EA708DC18596A2200FAE3B9 /* Trending Gifs */ = {
+			isa = PBXGroup;
+			children = (
+				1E9974A61857BF91002F73C0 /* TrendingGifModel.h */,
+				1E9974A71857BF91002F73C0 /* TrendingGifModel.m */,
+			);
+			name = "Trending Gifs";
 			sourceTree = "<group>";
 		};
 		1EAB45F61835AF840085629A = {
@@ -304,11 +315,8 @@
 		1EE776C3183C0D7700FCCD5B /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				1E6356771854106600F98A20 /* UIImage+animatedGIF.h */,
-				1E6356781854106600F98A20 /* UIImage+animatedGIF.m */,
 				1E94BC94184FC10700E7D456 /* Gifs.xcdatamodeld */,
-				1E9974A61857BF91002F73C0 /* TrendingGifModel.h */,
-				1E9974A71857BF91002F73C0 /* TrendingGifModel.m */,
+				1EA708DC18596A2200FAE3B9 /* Trending Gifs */,
 				1E9974A21857B0F9002F73C0 /* Data */,
 				1E9974A01857B0A1002F73C0 /* Gifs */,
 				1E9974A91857CA82002F73C0 /* Constants.h */,

@@ -61,7 +61,7 @@ static NSString *const TrendingGifsFeed = @"http://api.giffy.co/gifs/50";
         NSDictionary *gifEntryDict = gifsArray[i];
         NSString *url = gifEntryDict[@"url"];
         
-        NSDictionary *appDictionary = @{@"url":url, @"photo":[NSNull null]};
+        NSDictionary *appDictionary = @{@"url":url, @"photo":[NSNull null], @"data":[NSNull null]};
         [self.workingGifs addObject:[appDictionary mutableCopy]];
     }
     
@@ -87,7 +87,9 @@ static NSString *const TrendingGifsFeed = @"http://api.giffy.co/gifs/50";
         NSURL *url = [NSURL URLWithString:urlString];
         NSURLRequest *urlRequest = [NSURLRequest requestWithURL:url];
         [NSURLConnection sendAsynchronousRequest:urlRequest queue:self.downloadQueue completionHandler:^(NSURLResponse *response, NSData *data, NSError *error) {
+            NSData *imageData = data;
             UIImage *image = [UIImage imageWithData:data];
+            [dict setValue:imageData forKey:@"data"];
             [dict setValue:image forKey:@"photo"];
             [self performSelectorOnMainThread:@selector(notifyImageReadyAtIndex:) withObject:number waitUntilDone:NO];
         }];
