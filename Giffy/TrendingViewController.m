@@ -72,6 +72,8 @@
     // Dispose of any resources that can be recreated.
 }
 
+#pragma mark - CollectionView Delegate
+
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
     return [self.model count];
 }
@@ -94,6 +96,9 @@
     
     return cell;
 }
+
+
+#pragma mark - Notifications for Downloading Data
 
 - (void)gifDataDownloaded {
     [self.collectionView reloadData];

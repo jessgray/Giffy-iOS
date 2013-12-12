@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface TrendingGifModel : NSObject
+@interface TrendingGifModel : NSObject <NSURLConnectionDataDelegate>
 
 - (void)downloadData;
 - (NSInteger)count;

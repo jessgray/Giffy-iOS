@@ -46,7 +46,7 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-    
+
     self.collectionView.dataSource = self.dataSource;
     self.dataSource.collectionView = self.collectionView;
     

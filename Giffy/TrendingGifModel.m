@@ -52,6 +52,10 @@ static NSString *const TrendingGifsFeed = @"http://api.giffy.co/gifs/100";
     }];
 }
 
+- (NSCachedURLResponse *)connection:(NSURLConnection *)connection willCacheResponse:(NSCachedURLResponse *)cachedResponse {
+    return nil;
+}
+
 - (void)parseDownloadedData:(NSData *)data {
     
     NSError *error;

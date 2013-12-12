@@ -55,6 +55,8 @@
     
     self.multipleSelectionsAllowed = NO;
     
+    [self.dataSource update];
+    
     self.collectionView.dataSource = self.dataSource;
     self.dataSource.collectionView = self.collectionView;
     

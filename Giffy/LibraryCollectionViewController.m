@@ -38,6 +38,7 @@
         _dataSource = [[DataSource alloc] initForEntity:@"Gif" sortKeys:@[@"tag"] predicate:nil sectionNameKeyPath:@"tag" dataManagerDelegate:_myDataManager];
         
         _dataSource.delegate = self;
+
     }
     return self;
 }
@@ -46,6 +47,8 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    
+    [self.dataSource update];
     
     self.collectionView.dataSource = self.dataSource;
     self.dataSource.collectionView = self.collectionView;
