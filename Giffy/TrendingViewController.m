@@ -48,11 +48,6 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(gifDataDownloaded) name:GifDataDownloadCompleted object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(photoDownloaded:) name:GifPhotoDownlodCompleted object:nil];
     
-    
-    self.refreshControl = [UIRefreshControl new];
-    [self.refreshControl addTarget:self action:@selector(refreshCollection) forControlEvents:UIControlEventValueChanged];
-    [self.collectionView addSubview:self.refreshControl];
-    
     [self.collectionView reloadData];
     
 }
@@ -88,7 +83,6 @@
 
 - (void)gifDataDownloaded {
     [self.collectionView reloadData];
-    [self.refreshControl endRefreshing];
 }
 
 -(void)photoDownloaded:(NSNotification*)notification {
@@ -105,17 +99,27 @@
 
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {
     [self.collectionView reloadData];
-    [self.refreshControl endRefreshing];
 }
 
-#pragma mark - Segues 
+#pragma mark - Segues
+
+- (BOOL)shouldPerformSegueWithIdentifier:(NSString *)identifier sender:(id)sender {
+    
+    NSIndexPath *indexPath = [self.collectionView indexPathsForSelectedItems][0];
+    NSData *imageData = [self.model dataForIndex:indexPath.row];
+    
+    if(imageData != nil) {
+        return YES;
+    } else {
+        return NO;
+    }
+}
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if([segue.identifier isEqualToString:@"ViewTrendingGifSegue"]) {
+        
         ViewGifViewController *viewController = segue.destinationViewController;
-
         NSIndexPath *indexPath = [self.collectionView indexPathsForSelectedItems][0];
-
         viewController.gifData = [self.model dataForIndex:indexPath.row];
     }
 }

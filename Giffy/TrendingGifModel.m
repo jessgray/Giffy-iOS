@@ -102,7 +102,11 @@ static NSString *const TrendingGifsFeed = @"http://api.giffy.co/gifs/50";
 
 - (NSData *)dataForIndex:(NSInteger)index {
     NSDictionary *dict = [self.trendingGifs objectAtIndex:index];
-    return dict[@"data"];
+    if(!([dict objectForKey:@"data"] == [NSNull null])) {
+        return dict[@"data"];
+    } else {
+        return nil;
+    }
 }
 
 -(void)notifyImageReadyAtIndex:(NSNumber*)indexNumber {
