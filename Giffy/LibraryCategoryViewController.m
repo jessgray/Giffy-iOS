@@ -18,6 +18,8 @@
 @property (nonatomic, strong) DataSource *dataSource;
 @property (nonatomic, strong) MyDataManager *myDataManager;
 
+@property (nonatomic, strong) NSIndexPath *selectedCellIndexPath;
+
 @end
 
 @implementation LibraryCategoryViewController
@@ -52,6 +54,12 @@
     
     // Set title of Navigation controller
     self.navigationItem.title = self.sectionName;
+    
+    // attach long press gesture to collectionView
+    UILongPressGestureRecognizer *lpgr = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(handleLongPress:)];
+    lpgr.minimumPressDuration = .2; //seconds
+    lpgr.delegate = self;
+    [self.collectionView addGestureRecognizer:lpgr];
     
     UICollectionViewFlowLayout *collectionViewLayout = (UICollectionViewFlowLayout *)self.collectionView.collectionViewLayout;
     collectionViewLayout.sectionInset = UIEdgeInsetsMake(10, 10, 20, 10);
@@ -99,6 +107,52 @@
     
     [cell.contentView addSubview:imageView];
 }
+
+#pragma mark - Gestures
+
+-(void)handleLongPress:(UILongPressGestureRecognizer *)gestureRecognizer
+{
+    if (gestureRecognizer.state != UIGestureRecognizerStateBegan) {
+        return;
+    }
+    CGPoint p = [gestureRecognizer locationInView:self.collectionView];
+    
+    NSIndexPath *indexPath = [self.collectionView indexPathForItemAtPoint:p];
+    if (indexPath == nil){
+        NSLog(@"couldn't find index path");
+    } else {
+        // get the cell at indexPath (the one you long pressed)
+        self.selectedCellIndexPath = indexPath;
+        
+        UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:nil delegate:self cancelButtonTitle:@"Cancel" destructiveButtonTitle:nil otherButtonTitles:@"Copy Gif URL", @"Copy Gif", nil];
+        [actionSheet showFromTabBar:self.tabBarController.tabBar];
+        
+    }
+}
+
+- (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex {
+    
+    Gif *gif = [self.dataSource objectAtIndexPath:self.selectedCellIndexPath];
+    
+    // Copy gif link if "Copy Gif URL" button was tapped
+    if(buttonIndex == 0) {
+        
+        UIPasteboard *pasteBoard = [UIPasteboard generalPasteboard];
+        pasteBoard.string = gif.url;
+        
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Copied Gif URL" message:@"The gif's URL was copied to the clipboard!" delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil];
+        [alertView show];
+        
+    } else if(buttonIndex == 1) { // Copy gif for pasting directly into iMessage
+        UIPasteboard *pasteBoard = [UIPasteboard generalPasteboard];
+        NSData *data = gif.photo;
+        [pasteBoard setData:data forPasteboardType:@"com.compuserve.gif"];
+        
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Copied Gif" message:@"The gif was copied to the clipboard for use in iMessage" delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil];
+        [alertView show];
+    }
+}
+
 
 #pragma mark - Segues
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {

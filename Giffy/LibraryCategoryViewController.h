@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "DataSourceCellConfigurer.h"
 
-@interface LibraryCategoryViewController : UICollectionViewController <DataSourceCellConfigurer>
+@interface LibraryCategoryViewController : UICollectionViewController <DataSourceCellConfigurer, UIGestureRecognizerDelegate>
 
 @property (nonatomic, strong) NSString *sectionName;
 

@@ -136,13 +136,14 @@
         // get the cell at indexPath (the one you long pressed)
         self.selectedCellIndex = indexPath.row;
         
-        UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:nil delegate:self cancelButtonTitle:@"Cancel" destructiveButtonTitle:nil otherButtonTitles:@"Add Gif to Library", nil];
+        UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:nil delegate:self cancelButtonTitle:@"Cancel" destructiveButtonTitle:nil otherButtonTitles:@"Add Gif to Library", @"Copy Gif URL", @"Copy Gif", nil];
         [actionSheet showFromTabBar:self.tabBarController.tabBar];
 
     }
 }
 
 - (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex {
+    
     // Add gif to library if "Add to library" button was tapped
     if(buttonIndex == 0) {
         
@@ -150,6 +151,21 @@
         
         alertView.alertViewStyle = UIAlertViewStylePlainTextInput;
         
+        [alertView show];
+    } else if(buttonIndex == 1) {  // Copy gif link if "Copy Gif URL" button was tapped
+        
+        UIPasteboard *pasteBoard = [UIPasteboard generalPasteboard];
+        pasteBoard.string = [self.model urlForIndex:self.selectedCellIndex];
+        
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Copied Gif URL" message:@"The gif's URL was copied to the clipboard!" delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil];
+        [alertView show];
+        
+    } else if(buttonIndex == 2) { // Copy gif for pasting directly into iMessage
+        UIPasteboard *pasteBoard = [UIPasteboard generalPasteboard];
+        NSData *data = [self.model dataForIndex:self.selectedCellIndex];
+        [pasteBoard setData:data forPasteboardType:@"com.compuserve.gif"];
+        
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Copied Gif" message:@"The gif was copied to the clipboard for use in iMessage" delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil];
         [alertView show];
     }
 }
