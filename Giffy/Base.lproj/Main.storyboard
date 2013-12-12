@@ -130,7 +130,7 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="z41-u9-eLu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2233" y="112"/>
+            <point key="canvasLocation" x="2253" y="-592"/>
         </scene>
         <!--Library Category View Controller-->
         <scene sceneID="YfK-5x-S1q">
@@ -169,7 +169,7 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="P6g-RC-2V7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2759" y="112"/>
+            <point key="canvasLocation" x="2779" y="-592"/>
         </scene>
         <!--New Gif View Controller - Add New Gif-->
         <scene sceneID="BZc-bT-dSO">
@@ -223,7 +223,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AEL-dL-8wB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2773" y="-1278"/>
+            <point key="canvasLocation" x="2865" y="-1565"/>
         </scene>
         <!--View Gif View Controller - View Gif-->
         <scene sceneID="VcD-Xj-22t">
@@ -251,7 +251,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ICo-cw-WV6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2773" y="-589"/>
+            <point key="canvasLocation" x="3611" y="-424"/>
         </scene>
         <!--Navigation Controller - Recently Added-->
         <scene sceneID="mQ0-ap-3gN">
@@ -295,7 +295,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="97o-6j-ehI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1102" y="-86"/>
+            <point key="canvasLocation" x="1062" y="-790"/>
         </scene>
         <!--Navigation Controller - Library-->
         <scene sceneID="vdg-TF-xFc">
@@ -319,7 +319,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fg4-6s-nbV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1692" y="-86"/>
+            <point key="canvasLocation" x="1712" y="-790"/>
         </scene>
         <!--Navigation Controller - Trending-->
         <scene sceneID="KML-Vu-uXq">
@@ -342,7 +342,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pce-Ro-9wX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1696" y="677"/>
+            <point key="canvasLocation" x="1716" y="-27"/>
         </scene>
         <!--Trending View Controller - Trending Gifs-->
         <scene sceneID="ZQc-wb-uZq">
@@ -367,6 +367,9 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
+                                <connections>
+                                    <segue destination="UJ1-XW-sXa" kind="push" identifier="ViewTrendingGifSegue" id="TTt-D3-Yzn"/>
+                                </connections>
                             </collectionViewCell>
                         </cells>
                         <connections>
@@ -378,7 +381,7 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xUU-Ym-FHt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2233" y="828"/>
+            <point key="canvasLocation" x="2253" y="124"/>
         </scene>
     </scenes>
     <resources>
@@ -392,6 +395,6 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="buj-L0-YyQ"/>
+        <segue reference="TTt-D3-Yzn"/>
     </inferredMetricsTieBreakers>
 </document>

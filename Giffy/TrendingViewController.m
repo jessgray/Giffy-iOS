@@ -9,6 +9,7 @@
 #import "TrendingViewController.h"
 #import "TrendingGifModel.h"
 #import "Constants.h"
+#import "ViewGifViewController.h"
 
 @interface TrendingViewController ()
 
@@ -105,6 +106,18 @@
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {
     [self.collectionView reloadData];
     [self.refreshControl endRefreshing];
+}
+
+#pragma mark - Segues 
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if([segue.identifier isEqualToString:@"ViewTrendingGifSegue"]) {
+        ViewGifViewController *viewController = segue.destinationViewController;
+
+        NSIndexPath *indexPath = [self.collectionView indexPathsForSelectedItems][0];
+
+        viewController.gifData = [self.model dataForIndex:indexPath.row];
+    }
 }
 
 @end
