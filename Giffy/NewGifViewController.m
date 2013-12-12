@@ -73,7 +73,9 @@
         NSDateComponents *components = [calendar components:flags fromDate:date];
         NSDate *dateOnly = [calendar dateFromComponents:components];
         
-        NSDictionary *dictionary = @{@"tag":self.tagTextField.text, @"date":dateOnly, @"url":self.linkTextField.text};
+        NSString *tag = [self.tagTextField.text lowercaseString];
+        
+        NSDictionary *dictionary = @{@"tag":[tag capitalizedString], @"date":dateOnly, @"url":self.linkTextField.text};
         self.completionBlock(dictionary);
         
         UIAlertView *message = [[UIAlertView alloc] initWithTitle:nil message:@"Your gif was added!" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];

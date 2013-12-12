@@ -154,6 +154,7 @@
     if(buttonIndex == 1) {
         // Get textfield
         UITextField *textField = [alertView textFieldAtIndex:0];
+        NSString *tag = [textField.text lowercaseString];
         
         // Create date that has no minutes, hours, or seconds
         NSDate *date = [[NSDate alloc] init];
@@ -164,7 +165,7 @@
         
         NSString *url = [self.model urlForIndex:self.selectedCellIndex];
         
-        NSDictionary *dictionary = @{@"tag":textField.text, @"date":dateOnly, @"url":url};
+        NSDictionary *dictionary = @{@"tag":[tag capitalizedString], @"date":dateOnly, @"url":url};
         [self.myDataManager addGif:dictionary];
     }
 }
