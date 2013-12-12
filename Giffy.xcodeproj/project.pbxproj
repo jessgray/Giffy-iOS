@@ -30,6 +30,12 @@
 		1E9974961857AEC5002F73C0 /* TrendingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E9974951857AEC5002F73C0 /* TrendingViewController.m */; };
 		1E9974A81857BF91002F73C0 /* TrendingGifModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E9974A71857BF91002F73C0 /* TrendingGifModel.m */; };
 		1E9974AB1857CA82002F73C0 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E9974AA1857CA82002F73C0 /* Constants.m */; };
+		1EA708DF185A5F8400FAE3B9 /* giffyAppIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1EA708DD185A5F8400FAE3B9 /* giffyAppIcon@2x.png */; };
+		1EA708E0185A5F8400FAE3B9 /* giffyAppIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 1EA708DE185A5F8400FAE3B9 /* giffyAppIcon.png */; };
+		1EA708E3185A601F00FAE3B9 /* giffySpotlightIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 1EA708E1185A601F00FAE3B9 /* giffySpotlightIcon.png */; };
+		1EA708E4185A601F00FAE3B9 /* giffySettingsIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 1EA708E2185A601F00FAE3B9 /* giffySettingsIcon.png */; };
+		1EA708E7185A622E00FAE3B9 /* giffyLaunch.png in Resources */ = {isa = PBXBuildFile; fileRef = 1EA708E5185A622E00FAE3B9 /* giffyLaunch.png */; };
+		1EA708EA185A629600FAE3B9 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1EA708E9185A629600FAE3B9 /* Default-568h@2x.png */; };
 		1EAB46031835AF840085629A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EAB46021835AF840085629A /* Foundation.framework */; };
 		1EAB46051835AF840085629A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EAB46041835AF840085629A /* CoreGraphics.framework */; };
 		1EAB46071835AF840085629A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EAB46061835AF840085629A /* UIKit.framework */; };
@@ -43,6 +49,7 @@
 		1EAB46241835AF840085629A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EAB46061835AF840085629A /* UIKit.framework */; };
 		1EAB462C1835AF840085629A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1EAB462A1835AF840085629A /* InfoPlist.strings */; };
 		1EAB462E1835AF840085629A /* GiffyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EAB462D1835AF840085629A /* GiffyTests.m */; };
+		1EBC0969185A6334000C873C /* giffyLaunch@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1EBC0968185A6334000C873C /* giffyLaunch@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -96,6 +103,12 @@
 		1E9974A71857BF91002F73C0 /* TrendingGifModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrendingGifModel.m; sourceTree = "<group>"; };
 		1E9974A91857CA82002F73C0 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		1E9974AA1857CA82002F73C0 /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
+		1EA708DD185A5F8400FAE3B9 /* giffyAppIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "giffyAppIcon@2x.png"; sourceTree = "<group>"; };
+		1EA708DE185A5F8400FAE3B9 /* giffyAppIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = giffyAppIcon.png; sourceTree = "<group>"; };
+		1EA708E1185A601F00FAE3B9 /* giffySpotlightIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = giffySpotlightIcon.png; sourceTree = "<group>"; };
+		1EA708E2185A601F00FAE3B9 /* giffySettingsIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = giffySettingsIcon.png; sourceTree = "<group>"; };
+		1EA708E5185A622E00FAE3B9 /* giffyLaunch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = giffyLaunch.png; sourceTree = "<group>"; };
+		1EA708E9185A629600FAE3B9 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		1EAB45FF1835AF840085629A /* Giffy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Giffy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1EAB46021835AF840085629A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1EAB46041835AF840085629A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -113,6 +126,7 @@
 		1EAB46291835AF840085629A /* GiffyTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GiffyTests-Info.plist"; sourceTree = "<group>"; };
 		1EAB462B1835AF840085629A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1EAB462D1835AF840085629A /* GiffyTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GiffyTests.m; sourceTree = "<group>"; };
+		1EBC0968185A6334000C873C /* giffyLaunch@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "giffyLaunch@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -213,6 +227,7 @@
 		1EAB45F61835AF840085629A = {
 			isa = PBXGroup;
 			children = (
+				1EA708E9185A629600FAE3B9 /* Default-568h@2x.png */,
 				1EAB46081835AF840085629A /* Giffy */,
 				1EAB46271835AF840085629A /* GiffyTests */,
 				1EAB46011835AF840085629A /* Frameworks */,
@@ -246,10 +261,16 @@
 		1EAB46081835AF840085629A /* Giffy */ = {
 			isa = PBXGroup;
 			children = (
+				1EBC0968185A6334000C873C /* giffyLaunch@2x.png */,
+				1EA708E5185A622E00FAE3B9 /* giffyLaunch.png */,
+				1EA708E1185A601F00FAE3B9 /* giffySpotlightIcon.png */,
+				1EA708E2185A601F00FAE3B9 /* giffySettingsIcon.png */,
 				1E50553718562A2700E7CBE4 /* Recents@2x.png */,
 				1E505535185629FF00E7CBE4 /* Chart_Up@2x.png */,
 				1E505533185629CA00E7CBE4 /* Bookmarks@2x.png */,
 				1E6D81891856E6B300BE5C88 /* SelectionMark.png */,
+				1EA708DD185A5F8400FAE3B9 /* giffyAppIcon@2x.png */,
+				1EA708DE185A5F8400FAE3B9 /* giffyAppIcon.png */,
 				1EE776C1183C0D6C00FCCD5B /* View */,
 				1EE776C2183C0D7200FCCD5B /* Controllers */,
 				1EE776C3183C0D7700FCCD5B /* Models */,
@@ -402,13 +423,20 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1EA708E4185A601F00FAE3B9 /* giffySettingsIcon.png in Resources */,
 				1EAB461B1835AF840085629A /* Images.xcassets in Resources */,
+				1EA708E7185A622E00FAE3B9 /* giffyLaunch.png in Resources */,
 				1E6D818A1856E6B300BE5C88 /* SelectionMark.png in Resources */,
 				1EAB460D1835AF840085629A /* InfoPlist.strings in Resources */,
+				1EA708EA185A629600FAE3B9 /* Default-568h@2x.png in Resources */,
+				1EA708E0185A5F8400FAE3B9 /* giffyAppIcon.png in Resources */,
 				1E505534185629CA00E7CBE4 /* Bookmarks@2x.png in Resources */,
 				1EAB46161835AF840085629A /* Main.storyboard in Resources */,
 				1E505536185629FF00E7CBE4 /* Chart_Up@2x.png in Resources */,
 				1E50553818562A2700E7CBE4 /* Recents@2x.png in Resources */,
+				1EA708DF185A5F8400FAE3B9 /* giffyAppIcon@2x.png in Resources */,
+				1EA708E3185A601F00FAE3B9 /* giffySpotlightIcon.png in Resources */,
+				1EBC0969185A6334000C873C /* giffyLaunch@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -569,8 +597,6 @@
 		1EAB46321835AF840085629A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Giffy/Giffy-Prefix.pch";
 				INFOPLIST_FILE = "Giffy/Giffy-Info.plist";
@@ -583,8 +609,6 @@
 		1EAB46331835AF840085629A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Giffy/Giffy-Prefix.pch";
 				INFOPLIST_FILE = "Giffy/Giffy-Info.plist";
