@@ -10,7 +10,7 @@
 #import "Constants.h"
 
 
-static NSString *const TrendingGifsFeed = @"http://api.giffy.co/gifs/50";
+static NSString *const TrendingGifsFeed = @"http://api.giffy.co/gifs/100";
 
 @interface TrendingGifModel ()
 

@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TrendingViewController : UICollectionViewController
+@interface TrendingViewController : UICollectionViewController <UIGestureRecognizerDelegate, UIActionSheetDelegate, UIAlertViewDelegate>
 
 @end
