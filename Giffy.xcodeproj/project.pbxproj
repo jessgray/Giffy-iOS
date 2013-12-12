@@ -18,7 +18,6 @@
 		1E63567B1854109600F98A20 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E63567A1854109600F98A20 /* ImageIO.framework */; };
 		1E6D818A1856E6B300BE5C88 /* SelectionMark.png in Resources */ = {isa = PBXBuildFile; fileRef = 1E6D81891856E6B300BE5C88 /* SelectionMark.png */; };
 		1E74A5141851682A009F2BC2 /* HomeCollectionHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E74A5131851682A009F2BC2 /* HomeCollectionHeaderView.m */; };
-		1E94BC8F184FBCD800E7D456 /* TrendingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E94BC8E184FBCD800E7D456 /* TrendingViewController.m */; };
 		1E94BC91184FC06E00E7D456 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E94BC90184FC06E00E7D456 /* CoreData.framework */; };
 		1E94BC93184FC0A500E7D456 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E94BC92184FC0A400E7D456 /* CoreFoundation.framework */; };
 		1E94BC96184FC10700E7D456 /* Gifs.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1E94BC94184FC10700E7D456 /* Gifs.xcdatamodeld */; };
@@ -28,6 +27,9 @@
 		1E94BCA4184FC4B200E7D456 /* MyDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E94BCA3184FC4B200E7D456 /* MyDataManager.m */; };
 		1E94BCA7184FC7A700E7D456 /* Gif+Tag.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E94BCA6184FC7A700E7D456 /* Gif+Tag.m */; };
 		1E94BCB0184FCBDF00E7D456 /* NewGifViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E94BCAF184FCBDF00E7D456 /* NewGifViewController.m */; };
+		1E9974961857AEC5002F73C0 /* TrendingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E9974951857AEC5002F73C0 /* TrendingViewController.m */; };
+		1E9974A81857BF91002F73C0 /* TrendingGifModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E9974A71857BF91002F73C0 /* TrendingGifModel.m */; };
+		1E9974AB1857CA82002F73C0 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E9974AA1857CA82002F73C0 /* Constants.m */; };
 		1EAB46031835AF840085629A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EAB46021835AF840085629A /* Foundation.framework */; };
 		1EAB46051835AF840085629A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EAB46041835AF840085629A /* CoreGraphics.framework */; };
 		1EAB46071835AF840085629A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EAB46061835AF840085629A /* UIKit.framework */; };
@@ -71,8 +73,6 @@
 		1E6D81891856E6B300BE5C88 /* SelectionMark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SelectionMark.png; sourceTree = "<group>"; };
 		1E74A5121851682A009F2BC2 /* HomeCollectionHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeCollectionHeaderView.h; sourceTree = "<group>"; };
 		1E74A5131851682A009F2BC2 /* HomeCollectionHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeCollectionHeaderView.m; sourceTree = "<group>"; };
-		1E94BC8D184FBCD800E7D456 /* TrendingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrendingViewController.h; sourceTree = "<group>"; };
-		1E94BC8E184FBCD800E7D456 /* TrendingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrendingViewController.m; sourceTree = "<group>"; };
 		1E94BC90184FC06E00E7D456 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		1E94BC92184FC0A400E7D456 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
 		1E94BC95184FC10700E7D456 /* Gifs.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Gifs.xcdatamodel; sourceTree = "<group>"; };
@@ -90,6 +90,12 @@
 		1E94BCA6184FC7A700E7D456 /* Gif+Tag.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Gif+Tag.m"; sourceTree = "<group>"; };
 		1E94BCAE184FCBDF00E7D456 /* NewGifViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewGifViewController.h; sourceTree = "<group>"; };
 		1E94BCAF184FCBDF00E7D456 /* NewGifViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewGifViewController.m; sourceTree = "<group>"; };
+		1E9974941857AEC5002F73C0 /* TrendingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrendingViewController.h; sourceTree = "<group>"; };
+		1E9974951857AEC5002F73C0 /* TrendingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrendingViewController.m; sourceTree = "<group>"; };
+		1E9974A61857BF91002F73C0 /* TrendingGifModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrendingGifModel.h; sourceTree = "<group>"; };
+		1E9974A71857BF91002F73C0 /* TrendingGifModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrendingGifModel.m; sourceTree = "<group>"; };
+		1E9974A91857CA82002F73C0 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		1E9974AA1857CA82002F73C0 /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
 		1EAB45FF1835AF840085629A /* Giffy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Giffy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1EAB46021835AF840085629A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1EAB46041835AF840085629A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -161,10 +167,36 @@
 		1E94BCAD184FCB3D00E7D456 /* Trending Gifs */ = {
 			isa = PBXGroup;
 			children = (
-				1E94BC8D184FBCD800E7D456 /* TrendingViewController.h */,
-				1E94BC8E184FBCD800E7D456 /* TrendingViewController.m */,
+				1E9974941857AEC5002F73C0 /* TrendingViewController.h */,
+				1E9974951857AEC5002F73C0 /* TrendingViewController.m */,
 			);
 			name = "Trending Gifs";
+			sourceTree = "<group>";
+		};
+		1E9974A01857B0A1002F73C0 /* Gifs */ = {
+			isa = PBXGroup;
+			children = (
+				1E94BC97184FC38C00E7D456 /* Gif.h */,
+				1E94BC98184FC38C00E7D456 /* Gif.m */,
+				1E94BCA2184FC4B200E7D456 /* MyDataManager.h */,
+				1E94BCA3184FC4B200E7D456 /* MyDataManager.m */,
+				1E94BCA5184FC7A700E7D456 /* Gif+Tag.h */,
+				1E94BCA6184FC7A700E7D456 /* Gif+Tag.m */,
+			);
+			name = Gifs;
+			sourceTree = "<group>";
+		};
+		1E9974A21857B0F9002F73C0 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				1E94BC9A184FC49000E7D456 /* DataManager.h */,
+				1E94BC9B184FC49000E7D456 /* DataManager.m */,
+				1E94BC9C184FC49000E7D456 /* DataManagerDelegate.h */,
+				1E94BC9D184FC49000E7D456 /* DataSource.h */,
+				1E94BC9E184FC49000E7D456 /* DataSource.m */,
+				1E94BC9F184FC49000E7D456 /* DataSourceCellConfigurer.h */,
+			);
+			name = Data;
 			sourceTree = "<group>";
 		};
 		1EAB45F61835AF840085629A = {
@@ -275,18 +307,12 @@
 				1E6356771854106600F98A20 /* UIImage+animatedGIF.h */,
 				1E6356781854106600F98A20 /* UIImage+animatedGIF.m */,
 				1E94BC94184FC10700E7D456 /* Gifs.xcdatamodeld */,
-				1E94BC9A184FC49000E7D456 /* DataManager.h */,
-				1E94BC9B184FC49000E7D456 /* DataManager.m */,
-				1E94BC9C184FC49000E7D456 /* DataManagerDelegate.h */,
-				1E94BC9D184FC49000E7D456 /* DataSource.h */,
-				1E94BC9E184FC49000E7D456 /* DataSource.m */,
-				1E94BC9F184FC49000E7D456 /* DataSourceCellConfigurer.h */,
-				1E94BC97184FC38C00E7D456 /* Gif.h */,
-				1E94BC98184FC38C00E7D456 /* Gif.m */,
-				1E94BCA2184FC4B200E7D456 /* MyDataManager.h */,
-				1E94BCA3184FC4B200E7D456 /* MyDataManager.m */,
-				1E94BCA5184FC7A700E7D456 /* Gif+Tag.h */,
-				1E94BCA6184FC7A700E7D456 /* Gif+Tag.m */,
+				1E9974A61857BF91002F73C0 /* TrendingGifModel.h */,
+				1E9974A71857BF91002F73C0 /* TrendingGifModel.m */,
+				1E9974A21857B0F9002F73C0 /* Data */,
+				1E9974A01857B0A1002F73C0 /* Gifs */,
+				1E9974A91857CA82002F73C0 /* Constants.h */,
+				1E9974AA1857CA82002F73C0 /* Constants.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -394,12 +420,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				1E94BCA4184FC4B200E7D456 /* MyDataManager.m in Sources */,
-				1E94BC8F184FBCD800E7D456 /* TrendingViewController.m in Sources */,
 				1E94BC99184FC38C00E7D456 /* Gif.m in Sources */,
 				1E50553B18562FC100E7CBE4 /* LibraryCategoryViewController.m in Sources */,
 				1E94BCB0184FCBDF00E7D456 /* NewGifViewController.m in Sources */,
 				1EAB460F1835AF840085629A /* main.m in Sources */,
 				1E6356791854106600F98A20 /* UIImage+animatedGIF.m in Sources */,
+				1E9974A81857BF91002F73C0 /* TrendingGifModel.m in Sources */,
 				1E74A5141851682A009F2BC2 /* HomeCollectionHeaderView.m in Sources */,
 				1E63567618540EBE00F98A20 /* ViewGifViewController.m in Sources */,
 				1E12B6E718500D2700E0E3DA /* HomeCollectionViewController.m in Sources */,
@@ -407,8 +433,10 @@
 				1EAB46131835AF840085629A /* JGSAppDelegate.m in Sources */,
 				1E94BCA0184FC49000E7D456 /* DataManager.m in Sources */,
 				1E94BC96184FC10700E7D456 /* Gifs.xcdatamodeld in Sources */,
+				1E9974961857AEC5002F73C0 /* TrendingViewController.m in Sources */,
 				1E94BCA1184FC49000E7D456 /* DataSource.m in Sources */,
 				1E6356701853FDC900F98A20 /* LibraryCollectionViewController.m in Sources */,
+				1E9974AB1857CA82002F73C0 /* Constants.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

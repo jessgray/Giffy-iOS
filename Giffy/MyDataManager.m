@@ -19,10 +19,11 @@
 - (void)createDatabaseFor:(DataManager *)dataManager {
     
     NSBundle *bundle = [NSBundle mainBundle];
+    NSManagedObjectContext *managedObjectContext = dataManager.managedObjectContext;
+    
+    // Gifs
     NSString *plistPath = [bundle pathForResource:@"gifs" ofType:@"plist"];
     NSArray *gifsArray = [NSArray arrayWithContentsOfFile:plistPath];
-    
-    NSManagedObjectContext *managedObjectContext = dataManager.managedObjectContext;
     
     for(NSDictionary *dictionary in gifsArray) {
         Gif *gif = [NSEntityDescription insertNewObjectForEntityForName:@"Gif" inManagedObjectContext:managedObjectContext];
