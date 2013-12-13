@@ -9,6 +9,6 @@
 #import <UIKit/UIKit.h>
 #import "DataSourceCellConfigurer.h"
 
-@interface LibraryCollectionViewController : UICollectionViewController <DataSourceCellConfigurer>
+@interface LibraryCollectionViewController : UICollectionViewController <DataSourceCellConfigurer, UIGestureRecognizerDelegate, UIActionSheetDelegate>
 
 @end

@@ -108,6 +108,13 @@ dataManagerDelegate:(id<DataManagerDelegate>)dataManagerDelegate {
     return indexPath;
 }
 
+-(void)deleteRowAtIndexPath:(NSIndexPath *)indexPath inSection:(NSInteger)section {
+    NSManagedObject *managedObject = [[self.fetchedResultsController sections][section] objectAtIndexPath:indexPath];
+    NSManagedObjectContext *context = self.fetchedResultsController.managedObjectContext;
+    [context deleteObject:managedObject];
+    [context save:nil];  // really should error check here! // better to save lazily, when app terminates
+}
+
 -(void)deleteRowAtIndexPath:(NSIndexPath *)indexPath {
     NSManagedObject *managedObject = [self.fetchedResultsController objectAtIndexPath:indexPath];
     NSManagedObjectContext *context = self.fetchedResultsController.managedObjectContext;

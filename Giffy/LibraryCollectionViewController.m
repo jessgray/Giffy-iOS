@@ -19,6 +19,8 @@
 @property (nonatomic, strong) DataSource *dataSource;
 @property (nonatomic, strong) MyDataManager *myDataManager;
 
+@property (nonatomic, strong) NSIndexPath *selectedCellIndexPath;
+
 @end
 
 @implementation LibraryCollectionViewController
@@ -57,6 +59,13 @@
     collectionViewLayout.sectionInset = UIEdgeInsetsMake(10, 10, 20, 10);
     collectionViewLayout.minimumInteritemSpacing = 0;
     collectionViewLayout.minimumLineSpacing = 0;
+    
+    
+    // attach long press gesture to collectionView
+    UILongPressGestureRecognizer *lpgr = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(handleLongPress:)];
+    lpgr.minimumPressDuration = .2; //seconds
+    lpgr.delegate = self;
+    [self.collectionView addGestureRecognizer:lpgr];
     
     [self.collectionView reloadData];
     
@@ -99,6 +108,59 @@
     
     
 }
+
+#pragma mark - Gestures
+
+-(void)handleLongPress:(UILongPressGestureRecognizer *)gestureRecognizer
+{
+    if (gestureRecognizer.state != UIGestureRecognizerStateBegan) {
+        return;
+    }
+    CGPoint p = [gestureRecognizer locationInView:self.collectionView];
+    
+    NSIndexPath *indexPath = [self.collectionView indexPathForItemAtPoint:p];
+    if (indexPath == nil){
+        NSLog(@"couldn't find index path");
+    } else {
+        // get the cell at indexPath (the one you long pressed)
+        self.selectedCellIndexPath = indexPath;
+        
+        Gif *gif = [self.dataSource objectAtIndexPath:indexPath];
+        NSString *sectionTitle = gif.tag;
+        
+        UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:nil delegate:self cancelButtonTitle:@"Cancel" destructiveButtonTitle:nil otherButtonTitles:[NSString stringWithFormat:@"Delete all gifs in %@", sectionTitle], nil];
+        [actionSheet showFromTabBar:self.tabBarController.tabBar];
+    }
+}
+
+- (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex {
+    // Delete section
+    if(buttonIndex == 0) {
+        
+        NSMutableArray *indexPathArray = [[NSMutableArray alloc] init];
+        
+        NSInteger section = self.selectedCellIndexPath.section;
+        
+        NSIndexPath *indexPath = [NSIndexPath indexPathForItem:0 inSection:section];
+        
+        // Create array of index paths
+        for(int i=0; i < [self.collectionView numberOfItemsInSection:section]; i++) {
+            
+            NSIndexPath *newPath = [indexPath indexPathByAddingIndex:i];
+            [indexPathArray addObject:newPath];
+        }
+        
+        // Remove all items from data source
+        for (NSIndexPath *path in indexPathArray) {
+            [self.dataSource deleteRowAtIndexPath:path];
+        }
+        
+        // Remove items from collection view
+        NSIndexSet *indexSet = [NSIndexSet indexSetWithIndex:section];
+        [self.collectionView deleteSections:indexSet];
+    }
+}
+
 
 #pragma mark - Segues
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
