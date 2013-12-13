@@ -286,6 +286,7 @@
                     <tabBar key="tabBar" contentMode="scaleToFill" translucent="NO" id="sFg-Ga-f9T">
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="tintColor" red="0.1019607843" green="0.73725490199999999" blue="0.61176470589999998" alpha="1" colorSpace="calibratedRGB"/>
                     </tabBar>
                     <connections>
                         <segue destination="UtA-zo-VuX" kind="relationship" relationship="viewControllers" id="UMn-Ft-o1H"/>
