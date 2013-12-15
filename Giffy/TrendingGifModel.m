@@ -26,6 +26,15 @@ static NSString *const TrendingGifsFeed = @"http://api.giffy.co/gifs/100";
 
 @implementation TrendingGifModel
 
++(id)sharedInstance {
+    static id singleton = nil;
+    if (!singleton)
+    {
+        singleton = [[self alloc] init];
+    }
+    return singleton;
+}
+
 -(id)init {
     self = [super init];
     if (self) {

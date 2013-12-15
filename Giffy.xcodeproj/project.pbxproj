@@ -145,10 +145,10 @@
 		1E94BCAB184FCB3000E7D456 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				1E94BCAE184FCBDF00E7D456 /* NewGifViewController.h */,
-				1E94BCAF184FCBDF00E7D456 /* NewGifViewController.m */,
 				1E12B6E518500D2700E0E3DA /* HomeCollectionViewController.h */,
 				1E12B6E618500D2700E0E3DA /* HomeCollectionViewController.m */,
+				1E94BCAE184FCBDF00E7D456 /* NewGifViewController.h */,
+				1E94BCAF184FCBDF00E7D456 /* NewGifViewController.m */,
 			);
 			name = Home;
 			sourceTree = "<group>";
@@ -156,10 +156,10 @@
 		1E94BCAC184FCB3800E7D456 /* Library */ = {
 			isa = PBXGroup;
 			children = (
-				1E63566E1853FDC900F98A20 /* LibraryCollectionViewController.h */,
-				1E63566F1853FDC900F98A20 /* LibraryCollectionViewController.m */,
 				1E50553918562FC100E7CBE4 /* LibraryCategoryViewController.h */,
 				1E50553A18562FC100E7CBE4 /* LibraryCategoryViewController.m */,
+				1E63566E1853FDC900F98A20 /* LibraryCollectionViewController.h */,
+				1E63566F1853FDC900F98A20 /* LibraryCollectionViewController.m */,
 			);
 			name = Library;
 			sourceTree = "<group>";
@@ -176,12 +176,10 @@
 		1E9974A01857B0A1002F73C0 /* Gifs */ = {
 			isa = PBXGroup;
 			children = (
-				1E94BC97184FC38C00E7D456 /* Gif.h */,
-				1E94BC98184FC38C00E7D456 /* Gif.m */,
-				1E94BCA2184FC4B200E7D456 /* MyDataManager.h */,
-				1E94BCA3184FC4B200E7D456 /* MyDataManager.m */,
 				1E94BCA5184FC7A700E7D456 /* Gif+Tag.h */,
 				1E94BCA6184FC7A700E7D456 /* Gif+Tag.m */,
+				1E94BC97184FC38C00E7D456 /* Gif.h */,
+				1E94BC98184FC38C00E7D456 /* Gif.m */,
 			);
 			name = Gifs;
 			sourceTree = "<group>";
@@ -189,14 +187,16 @@
 		1E9974A21857B0F9002F73C0 /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				1E6356771854106600F98A20 /* UIImage+animatedGIF.h */,
-				1E6356781854106600F98A20 /* UIImage+animatedGIF.m */,
 				1E94BC9A184FC49000E7D456 /* DataManager.h */,
 				1E94BC9B184FC49000E7D456 /* DataManager.m */,
 				1E94BC9C184FC49000E7D456 /* DataManagerDelegate.h */,
 				1E94BC9D184FC49000E7D456 /* DataSource.h */,
 				1E94BC9E184FC49000E7D456 /* DataSource.m */,
 				1E94BC9F184FC49000E7D456 /* DataSourceCellConfigurer.h */,
+				1E94BCA2184FC4B200E7D456 /* MyDataManager.h */,
+				1E94BCA3184FC4B200E7D456 /* MyDataManager.m */,
+				1E6356771854106600F98A20 /* UIImage+animatedGIF.h */,
+				1E6356781854106600F98A20 /* UIImage+animatedGIF.m */,
 			);
 			name = Data;
 			sourceTree = "<group>";
@@ -301,13 +301,13 @@
 		1EE776C2183C0D7200FCCD5B /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				1E94BCAB184FCB3000E7D456 /* Home */,
 				1E74A5121851682A009F2BC2 /* HomeCollectionHeaderView.h */,
 				1E74A5131851682A009F2BC2 /* HomeCollectionHeaderView.m */,
+				1E94BCAC184FCB3800E7D456 /* Library */,
+				1E94BCAD184FCB3D00E7D456 /* Trending Gifs */,
 				1E63567418540EBE00F98A20 /* ViewGifViewController.h */,
 				1E63567518540EBE00F98A20 /* ViewGifViewController.m */,
-				1E94BCAC184FCB3800E7D456 /* Library */,
-				1E94BCAB184FCB3000E7D456 /* Home */,
-				1E94BCAD184FCB3D00E7D456 /* Trending Gifs */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";

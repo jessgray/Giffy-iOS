@@ -38,7 +38,7 @@
     if(self) {
         
         _myDataManager = [[MyDataManager alloc] init];
-        _model = [[TrendingGifModel alloc] init];
+        _model = [TrendingGifModel sharedInstance];
         [self.model addObserver:self forKeyPath:@"trendingGifs"
                         options:NSKeyValueObservingOptionNew
                         context:NULL];

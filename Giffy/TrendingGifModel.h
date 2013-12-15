@@ -12,6 +12,8 @@
 
 - (void)downloadData;
 - (NSInteger)count;
+
++(id)sharedInstance;
 - (NSString *)urlForIndex:(NSInteger)index;
 -(UIImage*)photoForIndex:(NSInteger)index;
 - (NSData *)dataForIndex:(NSInteger)index;
