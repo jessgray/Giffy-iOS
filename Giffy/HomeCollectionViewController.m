@@ -5,6 +5,15 @@
 //  Created by Jessica Smith on 12/4/13.
 //  Copyright (c) 2013 Jessica Smith. All rights reserved.
 //
+/*
+ This view is the recently added view. From here, the user can see all gifs that have
+ been added to giffy, sorted by the date they were added. The user can add a new gif
+ to giffy by pressing the '+' button in the upper right hand corner. They can also 
+ select multiple gifs to delete by pressing the select button, selecting all gifs
+ they want to delete, and then pressing the trash button. A user can copy a specific
+ gif's URL or the gif itself by pressing and holding on the gif. Finally, a user can
+ view the moving gif by tapping on the gif.
+ */
 
 #import "HomeCollectionViewController.h"
 #import "DataSource.h"

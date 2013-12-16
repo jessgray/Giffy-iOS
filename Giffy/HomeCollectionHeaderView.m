@@ -5,6 +5,9 @@
 //  Created by Jessica Smith on 12/5/13.
 //  Copyright (c) 2013 Jessica Smith. All rights reserved.
 //
+/*
+ This view defines the collection headers (where the date or tag name is displayed)
+ */
 
 #import "HomeCollectionHeaderView.h"
 #import "LibraryCategoryViewController.h"

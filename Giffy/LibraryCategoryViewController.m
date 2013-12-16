@@ -5,6 +5,13 @@
 //  Created by Jessica Smith on 12/9/13.
 //  Copyright (c) 2013 Jessica Smith. All rights reserved.
 //
+/*
+ This view is an extension of the library view. This view shows all gifs that
+ are currently in a specific category (gifs that have the same tag). The user
+ can view the gif by tapping on it, copy the URL or the gif itself by pressing
+ and holding, or can delete multiple gifs by pressing the 'select' button, 
+ selecting the gifs they want to delete, and then pressing the trash button. 
+ */
 
 #import "LibraryCategoryViewController.h"
 #import "DataSource.h"
@@ -21,10 +28,8 @@
 @property (nonatomic, strong) MyDataManager *myDataManager;
 
 @property (nonatomic, strong) NSIndexPath *selectedCellIndexPath;
-
 @property BOOL multipleSelectionsAllowed;
 @property BOOL copyingGif;
-
 @property (nonatomic, strong) UIBarButtonItem *backButton;
 
 @end

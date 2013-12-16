@@ -5,6 +5,12 @@
 //  Created by Jessica Smith on 12/4/13.
 //  Copyright (c) 2013 Jessica Smith. All rights reserved.
 //
+/*
+ This view is for adding gifs. The user simply needs to provide a tag and link for 
+ the gif, and the gif will then be added to the gif library under that tag. The user
+ will also be able to see the gif in their recently added gifs.
+ */
+
 
 #import "NewGifViewController.h"
 

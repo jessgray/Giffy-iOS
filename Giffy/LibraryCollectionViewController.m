@@ -5,6 +5,12 @@
 //  Created by Jessica Smith on 12/7/13.
 //  Copyright (c) 2013 Jessica Smith. All rights reserved.
 //
+/*
+ This view is the library view. It displays all gifs currently saved to the
+ phone, sorted by tags. The user can delete an entire section of gifs by 
+ pressing and holding on a section. The user can also see all gifs in that
+ section by tapping on the section. 
+ */
 
 #import "LibraryCollectionViewController.h"
 #import "DataSource.h"

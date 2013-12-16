@@ -5,6 +5,13 @@
 //  Created by Jessica Smith on 12/10/13.
 //  Copyright (c) 2013 Jessica Smith. All rights reserved.
 //
+/*
+ This view shows the top 100 trending gifs from reddit.com/r/reactiongifs. It uses
+ the giffy API gifs/{limit} route to call the gifs from reddit. Users can view any of
+ the trending gifs by tapping a gif. The user can also save a gif to their gif library,
+ copy the gif URL, or copy the gif itself by pressing and holding on a specific gif.
+ */
+
 
 #import "TrendingViewController.h"
 #import "TrendingGifModel.h"
