@@ -26,7 +26,6 @@
 @synthesize fetchedResultsController, fetchRequest;
 @synthesize delegate;
 
-
 -(id)initForEntity:(NSString *)name
           sortKeys:(NSArray*)sortKeys
          predicate:(NSPredicate*)predicate

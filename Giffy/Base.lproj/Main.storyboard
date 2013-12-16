@@ -55,9 +55,9 @@
                         </connections>
                     </collectionView>
                     <navigationItem key="navigationItem" title="giffy" id="9bk-im-Ynw">
-                        <barButtonItem key="leftBarButtonItem" title="Select" id="Uxw-sH-FBN">
+                        <barButtonItem key="leftBarButtonItem" title="Select" id="Tos-Wc-Fuv">
                             <connections>
-                                <action selector="selectButtonClicked:" destination="EF9-EA-QhM" id="m7Y-05-JXT"/>
+                                <action selector="selectButtonClicked:" destination="EF9-EA-QhM" id="gZG-xn-Lb4"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="URb-5y-ffL">
@@ -69,7 +69,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="addRemoveButton" destination="URb-5y-ffL" id="sMG-fr-r5M"/>
-                        <outlet property="selectButton" destination="Uxw-sH-FBN" id="kuL-hQ-OYw"/>
+                        <outlet property="selectButton" destination="Tos-Wc-Fuv" id="wYe-x1-J66"/>
                     </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="haN-Dp-Rzz" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -165,7 +165,16 @@
                             <outlet property="delegate" destination="qSf-DI-x04" id="0HW-lZ-uda"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" id="Xnk-U9-nnP"/>
+                    <navigationItem key="navigationItem" id="Xnk-U9-nnP">
+                        <barButtonItem key="rightBarButtonItem" title="Select" id="ngs-99-Oki">
+                            <connections>
+                                <action selector="selectButtonClicked:" destination="qSf-DI-x04" id="tbQ-8f-dAp"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="selectButton" destination="ngs-99-Oki" id="CA3-WQ-BSA"/>
+                    </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="P6g-RC-2V7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -415,6 +424,6 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="buj-L0-YyQ"/>
+        <segue reference="kJn-A9-vU0"/>
     </inferredMetricsTieBreakers>
 </document>

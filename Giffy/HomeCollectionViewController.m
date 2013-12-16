@@ -57,6 +57,8 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     
+    
+    // Turn off feature for multiple selection initially - user must press 'select' button to enable
     self.multipleSelectionsAllowed = NO;
     
     [self.dataSource update];
@@ -68,10 +70,11 @@
     
     // attach long press gesture to collectionView
     UILongPressGestureRecognizer *lpgr = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(handleLongPress:)];
-    lpgr.minimumPressDuration = .2; //seconds
+    lpgr.minimumPressDuration = .5; //seconds
     lpgr.delegate = self;
     [self.collectionView addGestureRecognizer:lpgr];
     
+    // Set margins for collection view
     UICollectionViewFlowLayout *collectionViewLayout = (UICollectionViewFlowLayout *)self.collectionView.collectionViewLayout;
     collectionViewLayout.sectionInset = UIEdgeInsetsMake(10, 10, 20, 10);
     
@@ -122,8 +125,7 @@
     }
 }
 
-
-
+// Remove the overlay on each deselected cell and disable delete button if this is the last cell deselected
 - (void)collectionView:(UICollectionView *)collectionView didDeselectItemAtIndexPath:(NSIndexPath *)indexPath {
     if(self.multipleSelectionsAllowed) {
         
@@ -139,6 +141,8 @@
     }
 }
 
+// Apply an overlay to visually distinguish selected cells. Enable the delete button so the user can delete all
+//  selected cells.
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     if(self.multipleSelectionsAllowed) {
         
@@ -180,6 +184,7 @@
         
         self.copyingGif = YES;
         
+        // Present the user with options for doing things to the gif.
         UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:nil delegate:self cancelButtonTitle:@"Cancel" destructiveButtonTitle:nil otherButtonTitles:@"Copy Gif URL", @"Copy Gif", nil];
         [actionSheet showFromTabBar:self.tabBarController.tabBar];
         
@@ -188,6 +193,7 @@
 
 - (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex {
     
+    // Determine which action sheet was presented to the user
     if(self.copyingGif) {
         Gif *gif = [self.dataSource objectAtIndexPath:self.selectedCellIndexPath];
         
@@ -244,6 +250,8 @@
     }
 }
 
+// This method handles the user clicking on the "select" button on the navigation bar, which allows them to
+//  select multiple gifs for deleting.
 - (IBAction)selectButtonClicked:(id)sender {
     
     if(!self.multipleSelectionsAllowed) {
@@ -287,6 +295,7 @@
     }
 }
 
+// Shows the action sheet to confirm the deletion of cells
 - (void)showDeleteActionSheet {
     NSUInteger count = [[self.collectionView indexPathsForSelectedItems] count];
     
@@ -294,6 +303,7 @@
     [actionSheet showFromTabBar:self.tabBarController.tabBar];
 }
 
+// Deletes cells that were selected by the user
 - (void)deleteSelectedCells {
     if(self.multipleSelectionsAllowed) {
         

@@ -56,7 +56,7 @@
     
     // attach long press gesture to collectionView
     UILongPressGestureRecognizer *lpgr = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(handleLongPress:)];
-    lpgr.minimumPressDuration = .2; //seconds
+    lpgr.minimumPressDuration = .5; //seconds
     lpgr.delegate = self;
     [self.collectionView addGestureRecognizer:lpgr];
     
@@ -177,17 +177,23 @@
         UITextField *textField = [alertView textFieldAtIndex:0];
         NSString *tag = [textField.text lowercaseString];
         
-        // Create date that has no minutes, hours, or seconds
-        NSDate *date = [[NSDate alloc] init];
-        unsigned int flags = NSYearCalendarUnit | NSMonthCalendarUnit | NSDayCalendarUnit;
-        NSCalendar *calendar = [NSCalendar currentCalendar];
-        NSDateComponents *components = [calendar components:flags fromDate:date];
-        NSDate *dateOnly = [calendar dateFromComponents:components];
-        
-        NSString *url = [self.model urlForIndex:self.selectedCellIndex];
-        
-        NSDictionary *dictionary = @{@"tag":[tag capitalizedString], @"date":dateOnly, @"url":url};
-        [self.myDataManager addGif:dictionary];
+        // Check that the user entered a tag
+        if(tag.length == 0) {
+            UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Error" message:@"You must provide a tag for the gif" delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil];
+            [alertView show];
+        } else {
+            // Create date that has no minutes, hours, or seconds
+            NSDate *date = [[NSDate alloc] init];
+            unsigned int flags = NSYearCalendarUnit | NSMonthCalendarUnit | NSDayCalendarUnit;
+            NSCalendar *calendar = [NSCalendar currentCalendar];
+            NSDateComponents *components = [calendar components:flags fromDate:date];
+            NSDate *dateOnly = [calendar dateFromComponents:components];
+            
+            NSString *url = [self.model urlForIndex:self.selectedCellIndex];
+            
+            NSDictionary *dictionary = @{@"tag":[tag capitalizedString], @"date":dateOnly, @"url":url};
+            [self.myDataManager addGif:dictionary];
+        }
     }
 }
 

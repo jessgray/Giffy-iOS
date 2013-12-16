@@ -55,6 +55,7 @@
     self.collectionView.dataSource = self.dataSource;
     self.dataSource.collectionView = self.collectionView;
     
+    // Set margins for the collection view
     UICollectionViewFlowLayout *collectionViewLayout = (UICollectionViewFlowLayout *)self.collectionView.collectionViewLayout;
     collectionViewLayout.sectionInset = UIEdgeInsetsMake(10, 10, 20, 10);
     collectionViewLayout.minimumInteritemSpacing = 0;
@@ -63,7 +64,7 @@
     
     // attach long press gesture to collectionView
     UILongPressGestureRecognizer *lpgr = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(handleLongPress:)];
-    lpgr.minimumPressDuration = .2; //seconds
+    lpgr.minimumPressDuration = .5; //seconds
     lpgr.delegate = self;
     [self.collectionView addGestureRecognizer:lpgr];
     
@@ -128,6 +129,7 @@
         Gif *gif = [self.dataSource objectAtIndexPath:indexPath];
         NSString *sectionTitle = gif.tag;
         
+        // Show action sheet to the user for actions they can perform on the gifs
         UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:nil delegate:self cancelButtonTitle:@"Cancel" destructiveButtonTitle:nil otherButtonTitles:[NSString stringWithFormat:@"Delete all gifs in %@", sectionTitle], nil];
         [actionSheet showFromTabBar:self.tabBarController.tabBar];
     }
